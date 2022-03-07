@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraEditors;
+using Gefun.Servico.Interface;
+using Gefun.Servico.Servico;
 using Gefun.UI.Cadastro;
 using System;
 using System.Collections.Generic;
@@ -14,9 +16,13 @@ namespace Gefun.UI
 {
     public partial class frmFuncionario : DevExpress.XtraEditors.XtraForm
     {
+        private FuncionarioServico _servicoFuncionario;
+
+
         public frmFuncionario()
         {
             InitializeComponent();
+            _servicoFuncionario = new FuncionarioServico();
         }
 
         private void textEdit2_EditValueChanged(object sender, EventArgs e)

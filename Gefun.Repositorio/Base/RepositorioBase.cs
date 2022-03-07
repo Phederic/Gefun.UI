@@ -1,58 +1,35 @@
 ﻿using Dapper.Contrib.Extensions;
+using Gefun.Dominio.Base;
 using Gefun.Repositorio.Configuracao;
-using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gefun.Repositorio.Base
 {
-    public class RepositorioBase<T> where T : class
+    public class RepositorioBase<T> : IRepositorio<T> where T : EntidadeBase
     {
         public SqlConnection _connection = DbContext.ObterConexao();
 
-        public T Obter(int id)
-            => _connection.Get<T>(id);
-
-        public int Inserir(T classe)
-            => (int)_connection.Insert<T>(classe);
-
-        public void Atualizar(T classe)
-            => _connection.Update<T>(classe);
-
-        public bool Delete(int id)
+        T IRepositorio<T>.Inserir(T obj)
         {
-            var T = _connection.Get<T>(id);
-            if (T is null)
-                return false;
-            _connection.Delete(T);
-            return true;
+            var id = (int)_connection.Insert<T>(obj);
+            return Obter(id);
         }
 
-        public void Delete(T classe)
-            => _connection.Delete<T>(classe);
-
-        public void InserirOuDeletar(T classe)
-        {        
-                if (classe == null)
-                    _connection.Insert<T>(classe);
-                else
-                    _connection.Update<T>(classe);
+        T IRepositorio<T>.Atualizar(T obj)
+        {
+            _connection.Update<T>(obj);
+            return Obter(obj.Id);
         }
 
-        public IEnumerable<T> Todos()
-            => _connection.GetAll<T>();
+        public void Excluir(int id)
+        {
+            var obj = Obter(id);
+            _connection.Delete<T>(obj);
+        }
 
-        /// <summary>
-        /// T Obter(id);
-        /// T Inserir(T)
-        /// T Atualizar(T)
-        /// T InserirOuAtualizar(T)
-        /// List<T> Todos()
-        /// Excluir(id)
-        /// </summary>
-        /// <param name=""></param>
+        public T Obter(int id)
+        {
+            return _connection.Get<T>(id);
+        }       
     }
 }

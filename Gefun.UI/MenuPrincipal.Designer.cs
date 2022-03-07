@@ -37,14 +37,16 @@ namespace Gefun.UI
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,8 +68,10 @@ namespace Gefun.UI
             this.barButtonItem4,
             this.barButtonItem5,
             this.barSubItem3,
-            this.barButtonItem6});
-            this.barManager1.MaxItemId = 9;
+            this.barButtonItem6,
+            this.barButtonItem7,
+            this.barButtonItem8});
+            this.barManager1.MaxItemId = 11;
             // 
             // bar1
             // 
@@ -120,6 +124,28 @@ namespace Gefun.UI
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Id = 6;
+            this.barButtonItem5.Name = "barButtonItem5";
+            // 
+            // barSubItem3
+            // 
+            this.barSubItem3.Caption = "Pesquisa";
+            this.barSubItem3.Id = 7;
+            this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8)});
+            this.barSubItem3.Name = "barSubItem3";
+            // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "Funcionario";
+            this.barButtonItem6.Id = 8;
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -158,25 +184,17 @@ namespace Gefun.UI
             this.barSubItem1.Id = 0;
             this.barSubItem1.Name = "barSubItem1";
             // 
-            // barButtonItem5
+            // barButtonItem7
             // 
-            this.barButtonItem5.Id = 6;
-            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem7.Caption = "Formação";
+            this.barButtonItem7.Id = 9;
+            this.barButtonItem7.Name = "barButtonItem7";
             // 
-            // barSubItem3
+            // barButtonItem8
             // 
-            this.barSubItem3.Caption = "Pesquisa";
-            this.barSubItem3.Id = 7;
-            this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6)});
-            this.barSubItem3.Name = "barSubItem3";
-            // 
-            // barButtonItem6
-            // 
-            this.barButtonItem6.Caption = "Funcionario";
-            this.barButtonItem6.Id = 8;
-            this.barButtonItem6.Name = "barButtonItem6";
-            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            this.barButtonItem8.Caption = "Cidades";
+            this.barButtonItem8.Id = 10;
+            this.barButtonItem8.Name = "barButtonItem8";
             // 
             // MenuPrincipal
             // 
@@ -212,5 +230,7 @@ namespace Gefun.UI
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarSubItem barSubItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
     }
 }

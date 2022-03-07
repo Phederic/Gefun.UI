@@ -115,6 +115,12 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pesquisa\frmCidadePesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\frmCidadePesquisa.Designer.cs">
+      <DependentUpon>frmCidadePesquisa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pesquisa\frmFuncionarioPesquisa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\frmCidadePesquisa.resx">
+      <DependentUpon>frmCidadePesquisa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pesquisa\frmFuncionarioPesquisa.resx">
       <DependentUpon>frmFuncionarioPesquisa.cs</DependentUpon>
@@ -190,6 +199,10 @@
     <ProjectReference Include="..\Gefun.Repositorio\Gefun.Repositorio.csproj">
       <Project>{648E070A-EF79-4835-BFFE-FDC6F76E95D0}</Project>
       <Name>Gefun.Repositorio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gefun.Servico\Gefun.Servico.csproj">
+      <Project>{F4868922-3E96-4AE0-AC89-32107D4A405D}</Project>
+      <Name>Gefun.Servico</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

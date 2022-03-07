@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\IRepositorio.cs" />
     <Compile Include="Base\RepositorioBase.cs" />
     <Compile Include="Repositorio\AnexoRepositorio.cs" />
     <Compile Include="Repositorio\CidadesRepositorio.cs" />

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Gefun.Servico.Servico
 {
-    public class FuncionarioBase : ServicoBase 
+    public class FuncionarioServico : ServicoBase 
     {
     }
 }

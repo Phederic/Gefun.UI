@@ -59,12 +59,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\IServicoBase.cs" />
     <Compile Include="Base\ServicoBase.cs" />
+    <Compile Include="Interface\IAnexoServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servico\AnexoServico.cs" />
     <Compile Include="Servico\CidadeServico.cs" />
     <Compile Include="Servico\FormacaoServico.cs" />
-    <Compile Include="Servico\FuncionarioBase.cs" />
+    <Compile Include="Servico\FuncionarioServico.cs" />
     <Compile Include="Servico\ParentescoServico.cs" />
     <Compile Include="Servico\TreinamentoServico.cs" />
     <Compile Include="Servico\TreinamentosRealizadosServico.cs" />
