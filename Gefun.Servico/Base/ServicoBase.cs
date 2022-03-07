@@ -51,8 +51,12 @@ namespace Gefun.Servico.Base
 
         public T Inserir(T obj)
         {
+<<<<<<< HEAD
             //using(var myConn = new SqlConnection("Data Source=BRENDEL-PC;user id=sa;password=saroot;"))
             using (var myConn = DbContext.ObterConexao())
+=======
+            using(var myConn = new SqlConnection("Data Source=BRENDEL-PC;user id=sa;password=saroot;"))
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             {
                 myConn.Open();
                 PreInserirEAtualizar(obj);

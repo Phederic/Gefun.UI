@@ -39,17 +39,24 @@ namespace Gefun.UI
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
             this.lkpSexo = new DevExpress.XtraEditors.LookUpEdit();
+<<<<<<< HEAD
             this.lkpEstadoCivil = new DevExpress.XtraEditors.LookUpEdit();
+=======
+            this.textEdit5 = new DevExpress.XtraEditors.LookUpEdit();
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.textEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.lkpFormacao = new DevExpress.XtraEditors.LookUpEdit();
+<<<<<<< HEAD
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit9 = new DevExpress.XtraEditors.LookUpEdit();
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+=======
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
@@ -80,7 +87,12 @@ namespace Gefun.UI
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+<<<<<<< HEAD
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+=======
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -91,6 +103,7 @@ namespace Gefun.UI
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpSexo.Properties)).BeginInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.lkpEstadoCivil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
@@ -100,6 +113,12 @@ namespace Gefun.UI
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpFormacao.Properties)).BeginInit();
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
@@ -130,7 +149,12 @@ namespace Gefun.UI
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -142,17 +166,24 @@ namespace Gefun.UI
             this.dataLayoutControl1.Controls.Add(this.textEdit3);
             this.dataLayoutControl1.Controls.Add(this.textEdit7);
             this.dataLayoutControl1.Controls.Add(this.lkpSexo);
+<<<<<<< HEAD
             this.dataLayoutControl1.Controls.Add(this.lkpEstadoCivil);
+=======
+            this.dataLayoutControl1.Controls.Add(this.textEdit5);
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.dataLayoutControl1.Controls.Add(this.textEdit2);
             this.dataLayoutControl1.Controls.Add(this.simpleButton1);
             this.dataLayoutControl1.Controls.Add(this.simpleButton2);
             this.dataLayoutControl1.Controls.Add(this.lkpFormacao);
+<<<<<<< HEAD
             this.dataLayoutControl1.Controls.Add(this.textEdit4);
             this.dataLayoutControl1.Controls.Add(this.textEdit5);
             this.dataLayoutControl1.Controls.Add(this.textEdit6);
             this.dataLayoutControl1.Controls.Add(this.simpleButton3);
             this.dataLayoutControl1.Controls.Add(this.textEdit9);
             this.dataLayoutControl1.Controls.Add(this.textEdit8);
+=======
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -180,8 +211,13 @@ namespace Gefun.UI
             // 
             // memoEdit1
             // 
+<<<<<<< HEAD
             this.memoEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "Observacao", true));
             this.memoEdit1.Location = new System.Drawing.Point(131, 169);
+=======
+            this.memoEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "Email", true));
+            this.memoEdit1.Location = new System.Drawing.Point(119, 134);
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Size = new System.Drawing.Size(979, 357);
             this.memoEdit1.StyleController = this.dataLayoutControl1;
@@ -194,7 +230,11 @@ namespace Gefun.UI
             // textEdit1
             // 
             this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "Nome", true));
+<<<<<<< HEAD
             this.textEdit1.Location = new System.Drawing.Point(131, 47);
+=======
+            this.textEdit1.Location = new System.Drawing.Point(119, 12);
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(979, 20);
             this.textEdit1.StyleController = this.dataLayoutControl1;
@@ -203,7 +243,11 @@ namespace Gefun.UI
             // textEdit3
             // 
             this.textEdit3.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "CPF", true));
+<<<<<<< HEAD
             this.textEdit3.Location = new System.Drawing.Point(131, 71);
+=======
+            this.textEdit3.Location = new System.Drawing.Point(119, 36);
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.BeepOnError = false;
             this.textEdit3.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
@@ -215,7 +259,11 @@ namespace Gefun.UI
             // textEdit7
             // 
             this.textEdit7.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "Email", true));
+<<<<<<< HEAD
             this.textEdit7.Location = new System.Drawing.Point(131, 145);
+=======
+            this.textEdit7.Location = new System.Drawing.Point(119, 110);
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Size = new System.Drawing.Size(979, 20);
             this.textEdit7.StyleController = this.dataLayoutControl1;
@@ -224,6 +272,7 @@ namespace Gefun.UI
             // lkpSexo
             // 
             this.lkpSexo.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "Sexo", true));
+<<<<<<< HEAD
             this.lkpSexo.Location = new System.Drawing.Point(131, 95);
             this.lkpSexo.Name = "lkpSexo";
             this.lkpSexo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -243,6 +292,23 @@ namespace Gefun.UI
             this.lkpEstadoCivil.Location = new System.Drawing.Point(754, 95);
             this.lkpEstadoCivil.Name = "lkpEstadoCivil";
             this.lkpEstadoCivil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+=======
+            this.lkpSexo.Location = new System.Drawing.Point(119, 60);
+            this.lkpSexo.Name = "lkpSexo";
+            this.lkpSexo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkpSexo.Properties.NullText = "";
+            this.lkpSexo.Size = new System.Drawing.Size(333, 20);
+            this.lkpSexo.StyleController = this.dataLayoutControl1;
+            this.lkpSexo.TabIndex = 7;
+            // 
+            // textEdit5
+            // 
+            this.textEdit5.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "EstadoCivil", true));
+            this.textEdit5.Location = new System.Drawing.Point(563, 60);
+            this.textEdit5.Name = "textEdit5";
+            this.textEdit5.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lkpEstadoCivil.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Descricao", "Estado civil")});
@@ -285,9 +351,15 @@ namespace Gefun.UI
             // 
             // simpleButton2
             // 
+<<<<<<< HEAD
             this.simpleButton2.Location = new System.Drawing.Point(1008, 119);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(102, 22);
+=======
+            this.simpleButton2.Location = new System.Drawing.Point(802, 84);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(94, 22);
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.simpleButton2.StyleController = this.dataLayoutControl1;
             this.simpleButton2.TabIndex = 13;
             this.simpleButton2.Text = "Nova formação";
@@ -296,6 +368,7 @@ namespace Gefun.UI
             // lkpFormacao
             // 
             this.lkpFormacao.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "FormacaoId", true));
+<<<<<<< HEAD
             this.lkpFormacao.Location = new System.Drawing.Point(131, 119);
             this.lkpFormacao.Name = "lkpFormacao";
             this.lkpFormacao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -361,6 +434,19 @@ namespace Gefun.UI
             this.textEdit8.Size = new System.Drawing.Size(979, 20);
             this.textEdit8.StyleController = this.dataLayoutControl1;
             this.textEdit8.TabIndex = 23;
+=======
+            this.lkpFormacao.Location = new System.Drawing.Point(119, 84);
+            this.lkpFormacao.Name = "lkpFormacao";
+            this.lkpFormacao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkpFormacao.Properties.DisplayMember = "Id";
+            this.lkpFormacao.Properties.NullText = "";
+            this.lkpFormacao.Properties.ValueMember = "FormacaoId";
+            this.lkpFormacao.Size = new System.Drawing.Size(679, 20);
+            this.lkpFormacao.StyleController = this.dataLayoutControl1;
+            this.lkpFormacao.TabIndex = 10;
+            this.lkpFormacao.EditValueChanged += new System.EventHandler(this.textEdit6_EditValueChanged);
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             // 
             // Root
             // 
@@ -646,13 +732,21 @@ namespace Gefun.UI
             this.emptySpaceItem1.Size = new System.Drawing.Size(103, 459);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
+<<<<<<< HEAD
             // emptySpaceItem4
+=======
+            // layoutControlItem10
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.Location = new System.Drawing.Point(987, 0);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
             this.emptySpaceItem4.Size = new System.Drawing.Size(103, 24);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // funcionarioBindingSource
+            // 
+            this.funcionarioBindingSource.DataSource = typeof(Gefun.Dominio.Classe.Funcionario);
             // 
             // frmFuncionario
             // 
@@ -672,6 +766,7 @@ namespace Gefun.UI
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpSexo.Properties)).EndInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.lkpEstadoCivil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
@@ -681,6 +776,12 @@ namespace Gefun.UI
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpFormacao.Properties)).EndInit();
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
@@ -711,7 +812,12 @@ namespace Gefun.UI
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.ResumeLayout(false);
 
         }
@@ -728,7 +834,11 @@ namespace Gefun.UI
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.TextEdit textEdit7;
         private DevExpress.XtraEditors.LookUpEdit lkpSexo;
+<<<<<<< HEAD
         private DevExpress.XtraEditors.LookUpEdit lkpEstadoCivil;
+=======
+        private DevExpress.XtraEditors.LookUpEdit textEdit5;
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
         private DevExpress.XtraEditors.DateEdit textEdit2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
@@ -768,6 +878,13 @@ namespace Gefun.UI
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+<<<<<<< HEAD
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+=======
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.LookUpEdit lkpFormacao;
+        private System.Windows.Forms.BindingSource funcionarioBindingSource;
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
     }
 }

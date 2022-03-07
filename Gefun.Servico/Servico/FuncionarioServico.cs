@@ -11,6 +11,7 @@ namespace Gefun.Servico.Servico
 {
     public class FuncionarioServico : ServicoBase<Funcionario ,FuncionarioRepositorio>
     {
+<<<<<<< HEAD
         private ParentescoServico _servicoParentesco;
         private AnexoServico _anexoServico;
         private TreinamentosRealizadosServico _treinamentosRealizadosServico;
@@ -64,6 +65,24 @@ namespace Gefun.Servico.Servico
             }
 
             return obj;
+=======
+        public Funcionario ObterCompleto(int id)
+        {
+            string query = @"
+            SELECT * FROM Funcionario WHERE Id= @id
+            SELECT * FROM Formacao WHERE FormacaoId= @id";
+
+            var funcionario = new Funcionario();
+            using(var mult = _connection.QueryMultiple(query, new { id }))
+            {
+                funcionario = mult.Read<Funcionario>().FirstOrDefault();
+                if (funcionario != null)
+                {
+                    funcionario.TreinamentosRealizados = mult.Read<TreinamentosRealizados>().ToList();
+                }
+            }
+            return funcionario;
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
         }
 
 
