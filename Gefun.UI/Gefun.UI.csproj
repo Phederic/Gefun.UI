@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
     </Reference>
@@ -57,14 +58,23 @@
     <Reference Include="DevExpress.BonusSkins.v21.1" />
     <Reference Include="DevExpress.Data.Desktop.v21.1" />
     <Reference Include="DevExpress.Data.v21.1" />
+    <Reference Include="DevExpress.Mvvm.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v21.1" />
     <Reference Include="DevExpress.Sparkline.v21.1.Core" />
     <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.1" />
     <Reference Include="DevExpress.Printing.v21.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,10 +85,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmFuncionario.cs">
+    <Compile Include="Cadastro\frmCidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFuncionario.Designer.cs">
+    <Compile Include="Cadastro\frmCidades.Designer.cs">
+      <DependentUpon>frmCidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\frmDependentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\frmDependentes.Designer.cs">
+      <DependentUpon>frmDependentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\frmFormacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\frmFormacao.Designer.cs">
+      <DependentUpon>frmFormacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\frmFuncionario.Designer.cs">
       <DependentUpon>frmFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
@@ -87,13 +115,31 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pesquisa\frmFuncionarioPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\frmFuncionarioPesquisa.Designer.cs">
+      <DependentUpon>frmFuncionarioPesquisa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmFuncionario.resx">
+    <EmbeddedResource Include="Cadastro\frmCidades.resx">
+      <DependentUpon>frmCidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\frmDependentes.resx">
+      <DependentUpon>frmDependentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\frmFormacao.resx">
+      <DependentUpon>frmFormacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\frmFuncionario.resx">
       <DependentUpon>frmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\frmFuncionarioPesquisa.resx">
+      <DependentUpon>frmFuncionarioPesquisa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -108,6 +154,12 @@
     </Compile>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Gefun.Dominio.Classe.Anexo.datasource" />
+    <None Include="Properties\DataSources\Gefun.Dominio.Classe.Cadastro.Cidades.datasource" />
+    <None Include="Properties\DataSources\Gefun.Dominio.Classe.Cadastro.Formacao.datasource" />
+    <None Include="Properties\DataSources\Gefun.Dominio.Classe.Cadastro.Treinamentos.datasource" />
+    <None Include="Properties\DataSources\Gefun.Dominio.Classe.Funcionario.datasource" />
+    <None Include="Properties\DataSources\Gefun.Dominio.Classe.TreinamentosRealizados.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,14 +183,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Gefun.Dominio\Gefun.Dominio.csproj">
+      <Project>{51b6a6ae-0c12-47b6-964b-8838cd307ead}</Project>
+      <Name>Gefun.Dominio</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gefun.Repositorio\Gefun.Repositorio.csproj">
       <Project>{648E070A-EF79-4835-BFFE-FDC6F76E95D0}</Project>
       <Name>Gefun.Repositorio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Cadastro\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

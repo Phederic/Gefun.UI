@@ -9,6 +9,8 @@ namespace Gefun.Servico.Base
 {
     public class ServicoBase<T> where T : class
     {
-   
+
+
+
     }
-}
+    }
