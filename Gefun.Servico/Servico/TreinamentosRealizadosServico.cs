@@ -1,12 +1,9 @@
-﻿using Gefun.Servico.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Gefun.Dominio.Classe;
+using Gefun.Repositorio.Base.Repository;
+using Gefun.Servico.Base;
 namespace Gefun.Servico.Servico
 {
-    public class TreinamentosRealizadosServico : ServicoBase
+    public class TreinamentosRealizadosServico : ServicoBase<TreinamentosRealizados, TreinamentosRealizadosRepositorio>
     {
     }
 }

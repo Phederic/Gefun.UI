@@ -51,12 +51,13 @@ namespace Gefun.Servico.Base
 
         public T Inserir(T obj)
         {
-            using(var transacao = DbContext.ObterConexao().BeginTransaction())
+            //using(var myConn = new SqlConnection("Data Source=BRENDEL-PC;user id=sa;password=saroot;"))
+            using (var myConn = DbContext.ObterConexao())
             {
+                myConn.Open();
                 PreInserirEAtualizar(obj);
                 obj = Inserindo(obj);
                 PosInserirEAtualizar(obj);
-                transacao.Commit();
                 return obj;
             }
         }
