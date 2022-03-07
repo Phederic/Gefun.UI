@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0006: Arquivo de origem "C:\Users\Brendel-PC\source\repos\Gefun.UI\Gefun.Servico\bin\Debug\Gefun.Servico.exe" não pode ser encontrado
+dotnet_diagnostic.CS0006.severity = error
