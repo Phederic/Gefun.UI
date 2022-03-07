@@ -1,4 +1,5 @@
 ﻿using Dapper.Contrib.Extensions;
+using Gefun.Dominio.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace Gefun.Dominio.Classe.Cadastro
 {
     [Table("Formacao")]
-   public class Formacao
+   public class Formacao : EntidadeBase
     {
         public const int MaxDescricao = 150;
         [DisplayName("Descrição")]
