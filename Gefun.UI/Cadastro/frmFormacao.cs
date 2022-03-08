@@ -20,8 +20,13 @@ namespace Gefun.UI.Cadastro
         public Formacao Formacao
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             get => formacaoBindingSource.DataSource as Formacao;
             set => formacaoBindingSource.DataSource = value;
+=======
+            get => bindingFormacao.DataSource as Formacao;
+            set => bindingFormacao.DataSource = value;
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
 =======
             get => bindingFormacao.DataSource as Formacao;
             set => bindingFormacao.DataSource = value;
@@ -34,6 +39,7 @@ namespace Gefun.UI.Cadastro
             InitializeComponent();
             _formacaoServico = new FormacaoServico();
 <<<<<<< HEAD
+<<<<<<< HEAD
             Novo();
         }
 
@@ -42,13 +48,18 @@ namespace Gefun.UI.Cadastro
             Formacao = new Formacao();
 =======
 >>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+=======
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             _formacaoServico.Inserir(Formacao);
 <<<<<<< HEAD
+<<<<<<< HEAD
             Close();
+=======
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
 =======
 >>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
 

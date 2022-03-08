@@ -30,6 +30,7 @@ namespace Gefun.UI
             InitializeComponent();
             _servicoFuncionario = new FuncionarioServico();
 <<<<<<< HEAD
+<<<<<<< HEAD
             _servicoFormacao = new FormacaoServico();
             AtualizarLookup();
             Novo();
@@ -45,6 +46,9 @@ namespace Gefun.UI
             lkpSexo.Properties.DataSource = EnumHelper.ObterLista<ESexo>();
             lkpFormacao.Properties.DataSource = _servicoFormacao.Todos();
             lkpEstadoCivil.Properties.DataSource = EnumHelper.ObterLista<EEstadoCivil>();
+=======
+            
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
 =======
             
 >>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
@@ -71,6 +75,22 @@ namespace Gefun.UI
         private void textEdit6_EditValueChanged(object sender, EventArgs e)
         {
     
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            _servicoFuncionario.ObterCompleto(Funcionario.Id);
+        }
+
+        private void textEdit6_EditValueChanged(object sender, EventArgs e)
+        {
+            Funcionario.FormacaoId = (int)lkpFormacao.EditValue;
+
+            if (Funcionario.FormacaoId == 0)
+                return;
+            var formacao = _servicoFormacao.Obter(Funcionario.Id);
+            
+            
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

@@ -12,6 +12,7 @@ namespace Gefun.Servico.Servico
     public class FuncionarioServico : ServicoBase<Funcionario ,FuncionarioRepositorio>
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         private ParentescoServico _servicoParentesco;
         private AnexoServico _anexoServico;
         private TreinamentosRealizadosServico _treinamentosRealizadosServico;
@@ -66,6 +67,8 @@ namespace Gefun.Servico.Servico
 
             return obj;
 =======
+=======
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
         public Funcionario ObterCompleto(int id)
         {
             string query = @"
@@ -82,6 +85,9 @@ namespace Gefun.Servico.Servico
                 }
             }
             return funcionario;
+<<<<<<< HEAD
+>>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+=======
 >>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
         }
 
