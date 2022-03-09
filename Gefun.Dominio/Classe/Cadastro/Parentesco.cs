@@ -12,6 +12,7 @@ namespace Gefun.Dominio.Base
     [Table("Parentesco")]
    public class Parentesco : EntidadeBaseLista
     {
+        public const int NomeTamanhoMax = 150;
         [DisplayName("Funcionario")]
         public int FuncionarioId { get; set; }
         [DisplayName("Grau de parentesco")]

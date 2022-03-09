@@ -1,15 +1,6 @@
-﻿using DevExpress.XtraEditors;
-using Gefun.Dominio.Classe.Cadastro;
+﻿using Gefun.Dominio.Classe.Cadastro;
 using Gefun.Servico.Servico;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Gefun.UI.Cadastro
 {
@@ -19,18 +10,10 @@ namespace Gefun.UI.Cadastro
 
         public Formacao Formacao
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             get => formacaoBindingSource.DataSource as Formacao;
             set => formacaoBindingSource.DataSource = value;
-=======
-            get => bindingFormacao.DataSource as Formacao;
-            set => bindingFormacao.DataSource = value;
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
-            get => bindingFormacao.DataSource as Formacao;
-            set => bindingFormacao.DataSource = value;
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+
 
         }
 
@@ -38,31 +21,20 @@ namespace Gefun.UI.Cadastro
         {
             InitializeComponent();
             _formacaoServico = new FormacaoServico();
-<<<<<<< HEAD
-<<<<<<< HEAD
             Novo();
         }
 
         private void Novo()
         {
             Formacao = new Formacao();
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             _formacaoServico.Inserir(Formacao);
-<<<<<<< HEAD
-<<<<<<< HEAD
             Close();
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-
         }
     }
+
 }

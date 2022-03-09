@@ -1,4 +1,4 @@
-﻿using Dapper.Contrib.Extensions;
+﻿    using Dapper.Contrib.Extensions;
 using Gefun.Dominio.Classe.Cadastro;
 using Gefun.Repositorio.Configuracao;
 using System;

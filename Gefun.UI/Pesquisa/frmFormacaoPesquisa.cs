@@ -14,36 +14,58 @@ using System.Windows.Forms;
 
 namespace Gefun.UI.Pesquisa
 {
-    public partial class frmCidadePesquisa : DevExpress.XtraEditors.XtraForm
+    public partial class frmFormacaoPesquisa : DevExpress.XtraEditors.XtraForm
     {
-        private CidadeServico _cidadeServico;
+        private FormacaoServico _formacaoServico;
 
-        public IEnumerable<Cidades> Cidades
+        public IEnumerable<Formacao> Formacao
         {
-            get => cidadesBindingSource.DataSource as IEnumerable<Cidades>;
-            set => cidadesBindingSource.DataSource = value;
+            get => formacaoBindingSource.DataSource as IEnumerable<Formacao>;
+            set => formacaoBindingSource.DataSource = value;
         }
 
-
-        public frmCidadePesquisa()
+        public frmFormacaoPesquisa()
         {
             InitializeComponent();
-            _cidadeServico = new CidadeServico();
+            _formacaoServico = new FormacaoServico();
             Pesquisar();
 
         }
-
         public void Pesquisar()
         {
-            Cidades = _cidadeServico.Todos();
-            cidadesBindingSource.ResetBindings(false);
+            Formacao = _formacaoServico.Todos();
+            formacaoBindingSource.ResetBindings(false);
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var frm = new frmCidades();
+            var frm = new frmFormacao();
             frm.ShowDialog();
             Pesquisar();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var linha = (Formacao)gridView1.GetRow(gridView1.FocusedRowHandle);
+            {
+                if (linha == null)
+                    return;
+                var result = MessageBox.Show("Deseja excluir a formação?", "EXCLUSÃO", MessageBoxButtons.YesNo);
+                {
+                    if (result == DialogResult.Yes)
+                    {
+                        if (linha.Id > 0)
+                        {
+                            var _repositorioFormacao = new FormacaoServico();
+                            _repositorioFormacao.Excluir(linha.Id);
+                        }
+                    }
+                    Pesquisar();
+                }
+
+
+
+            }
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -64,7 +86,7 @@ namespace Gefun.UI.Pesquisa
                 if (View != null)
                 {
                     View.OptionsPrint.ExpandAllDetails = true;
-                    View.ExportToXlsx("ListaCidade.csv");
+                    View.ExportToXlsx("ListaFormacao.csv");
                 }
             }
         }
@@ -78,27 +100,8 @@ namespace Gefun.UI.Pesquisa
                 if (View != null)
                 {
                     View.OptionsPrint.ExpandAllDetails = true;
-                    View.ExportToPdf("ListaCidade.pdf");
+                    View.ExportToPdf("ListaFormacao.pdf");
                 }
-            }
-        }
-
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            var linha = (Cidades)gridView1.GetRow(gridView1.FocusedRowHandle);
-            {
-                if (linha == null)
-                    return;
-                var result = MessageBox.Show("Deseja excluir?", "EXCLUSÃO", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    if (linha.Id > 0)
-                    {
-                        var _repositorioCidade = new CidadeServico();
-                        _repositorioCidade.Excluir(linha.Id);
-                    }
-                }
-                Pesquisar();
             }
         }
     }

@@ -51,16 +51,9 @@ namespace Gefun.Servico.Base
 
         public T Inserir(T obj)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            //using(var myConn = new SqlConnection("Data Source=BRENDEL-PC;user id=sa;password=saroot;"))
+
             using (var myConn = DbContext.ObterConexao())
-=======
-            using(var myConn = new SqlConnection("Data Source=BRENDEL-PC;user id=sa;password=saroot;"))
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
-            using(var myConn = new SqlConnection("Data Source=BRENDEL-PC;user id=sa;password=saroot;"))
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+
             {
                 myConn.Open();
                 PreInserirEAtualizar(obj);
@@ -72,12 +65,13 @@ namespace Gefun.Servico.Base
 
         public T Atualizar(T obj)
         {
-            using (var transacao = DbContext.ObterConexao().BeginTransaction())
+            using (var myConn = DbContext.ObterConexao())
             {
+                myConn.Open();
                 PreInserirEAtualizar(obj);
                 obj = Atualizando(obj);
                 PosInserirEAtualizar(obj);
-                transacao.Commit();
+                
                 return obj;
             }
         }
@@ -88,11 +82,11 @@ namespace Gefun.Servico.Base
 
         public void Excluir(int id)
         {
-            using (var transacao = DbContext.ObterConexao().BeginTransaction())
+            using (var myConn = DbContext.ObterConexao())            
             {
+                myConn.Open();
                 PreExcluir(id);
-                Excluindo(id);
-                transacao.Commit();
+                Excluindo(id);                
             };
         }
 

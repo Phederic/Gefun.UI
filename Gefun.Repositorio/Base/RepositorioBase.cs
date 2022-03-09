@@ -12,13 +12,14 @@ namespace Gefun.Repositorio.Base
         T IRepositorio<T>.Inserir(T obj)
         {
             var id = (int)_connection.Insert<T>(obj);
-            return Obter(id);
+            obj.Id = id;
+            return obj;
         }
 
         T IRepositorio<T>.Atualizar(T obj)
         {
-            _connection.Update<T>(obj);
-            return Obter(obj.Id);
+            _connection.Update<T>(obj);            
+            return obj;
         }
 
         public void Excluir(int id)

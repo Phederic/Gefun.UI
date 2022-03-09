@@ -15,7 +15,7 @@ namespace Gefun.Dominio.Classe
         [DisplayName("Funcionario")]
         public int FuncionarioId { get; set; }
         [DisplayName("Treinamento")]
-        public int TreinamentoId { get; set; }
+        public int TreinamentosId { get; set; }
 
     }
 }

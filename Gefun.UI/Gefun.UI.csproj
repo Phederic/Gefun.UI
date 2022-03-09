@@ -109,17 +109,29 @@
     <Compile Include="Cadastro\frmFuncionario.Designer.cs">
       <DependentUpon>frmFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPrincipal.cs">
+    <Compile Include="Cadastro\frmTreinamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <Compile Include="Cadastro\frmTreinamento.Designer.cs">
+      <DependentUpon>frmTreinamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovoMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovoMenuPrincipal.Designer.cs">
+      <DependentUpon>NovoMenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Pesquisa\frmCidadePesquisa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pesquisa\frmCidadePesquisa.Designer.cs">
       <DependentUpon>frmCidadePesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\frmFormacaoPesquisa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\frmFormacaoPesquisa.Designer.cs">
+      <DependentUpon>frmFormacaoPesquisa.cs</DependentUpon>
     </Compile>
     <Compile Include="Pesquisa\frmFuncionarioPesquisa.cs">
       <SubType>Form</SubType>
@@ -141,11 +153,17 @@
     <EmbeddedResource Include="Cadastro\frmFuncionario.resx">
       <DependentUpon>frmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastro\frmTreinamento.resx">
+      <DependentUpon>frmTreinamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovoMenuPrincipal.resx">
+      <DependentUpon>NovoMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pesquisa\frmCidadePesquisa.resx">
       <DependentUpon>frmCidadePesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\frmFormacaoPesquisa.resx">
+      <DependentUpon>frmFormacaoPesquisa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pesquisa\frmFuncionarioPesquisa.resx">
       <DependentUpon>frmFuncionarioPesquisa.cs</DependentUpon>
@@ -163,12 +181,17 @@
     </Compile>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\EnumHelper.datasource" />
+    <None Include="Properties\DataSources\Gefun.Dominio.Base.EntidadeBase.datasource" />
+    <None Include="Properties\DataSources\Gefun.Dominio.Base.EntidadeBaseLista.datasource" />
+    <None Include="Properties\DataSources\Gefun.Dominio.Base.Parentesco.datasource" />
     <None Include="Properties\DataSources\Gefun.Dominio.Classe.Anexo.datasource" />
     <None Include="Properties\DataSources\Gefun.Dominio.Classe.Cadastro.Cidades.datasource" />
     <None Include="Properties\DataSources\Gefun.Dominio.Classe.Cadastro.Formacao.datasource" />
     <None Include="Properties\DataSources\Gefun.Dominio.Classe.Cadastro.Treinamentos.datasource" />
     <None Include="Properties\DataSources\Gefun.Dominio.Classe.Funcionario.datasource" />
     <None Include="Properties\DataSources\Gefun.Dominio.Classe.TreinamentosRealizados.datasource" />
+    <None Include="Properties\DataSources\ReflectionHelper.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

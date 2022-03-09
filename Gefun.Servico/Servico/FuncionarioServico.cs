@@ -1,7 +1,9 @@
 ﻿using Dapper;
+using Gefun.Dominio.Base;
 using Gefun.Dominio.Classe;
 using Gefun.Repositorio.Base.Repository;
 using Gefun.Servico.Base;
+using Gefun.Servico.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,22 +11,23 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Gefun.Servico.Servico
 {
-    public class FuncionarioServico : ServicoBase<Funcionario ,FuncionarioRepositorio>
+    public class FuncionarioServico : ServicoBase<Funcionario, FuncionarioRepositorio>, IFuncionarioServico
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         private ParentescoServico _servicoParentesco;
         private AnexoServico _anexoServico;
         private TreinamentosRealizadosServico _treinamentosRealizadosServico;
 
         public FuncionarioServico()
         {
+            _repositorio = new FuncionarioRepositorio();
             _servicoParentesco = new ParentescoServico();
+            _treinamentosRealizadosServico = new TreinamentosRealizadosServico();
+            _anexoServico = new AnexoServico();
         }
 
         public List<Funcionario> Todos()
         {
-            return _repositorio.Todos();            
+            return _repositorio.Todos();
         }
 
         public override void PosInserirEAtualizar(Funcionario obj)
@@ -34,12 +37,12 @@ namespace Gefun.Servico.Servico
             {
                 if (!item.Excluir)
                     _servicoParentesco.InserirOuAtualizar(item);
-                else                
+                else
                     _servicoParentesco.Excluir(item.Id);
             }
 
             obj.Anexos.ForEach(x => x.FuncionarioId = obj.Id);
-            foreach(var item in obj.Anexos)
+            foreach (var item in obj.Anexos)
             {
                 if (!item.Excluir)
                     _anexoServico.InserirOuAtualizar(item);
@@ -47,7 +50,7 @@ namespace Gefun.Servico.Servico
                     _anexoServico.Excluir(item.Id);
             }
             obj.TreinamentosRealizados.ForEach(x => x.FuncionarioId = obj.Id);
-            foreach(var item in obj.TreinamentosRealizados)
+            foreach (var item in obj.TreinamentosRealizados)
             {
                 if (!item.Excluir)
                     _treinamentosRealizadosServico.InserirOuAtualizar(item);
@@ -56,6 +59,18 @@ namespace Gefun.Servico.Servico
             }
 
         }
+        public override void PreExcluir(int id)
+        {
+            var obj = Obter(id);
+            foreach (var item in obj.Parentescos)
+                _servicoParentesco.Excluir(item.Id);
+
+            foreach (var item in obj.Anexos)
+                _anexoServico.Excluir(item.Id);
+
+            foreach (var item in obj.TreinamentosRealizados)
+                _treinamentosRealizadosServico.Excluir(item.Id);
+        }
 
         protected override Funcionario Obtendo(int id)
         {
@@ -63,34 +78,37 @@ namespace Gefun.Servico.Servico
             if (obj != null)
             {
                 obj.Parentescos = _servicoParentesco.PorFuncionario(obj.Id);
+                obj.TreinamentosRealizados = _treinamentosRealizadosServico.PorFuncionario(obj.Id);
+                obj.Anexos = _anexoServico.PorFuncionario(obj.Id);
             }
 
             return obj;
-=======
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+        }
+
         public Funcionario ObterCompleto(int id)
         {
             string query = @"
-            SELECT * FROM Funcionario WHERE Id= @id
-            SELECT * FROM Formacao WHERE FormacaoId= @id";
+            SELECT * FROM Funcionario WHERE Id= @id;
+            SELECT * FROM Parentesco WHERE Id= @id;
+            SELECT * FROM TreinamentosRealizados WHERE Id=@id;
+            ";
 
             var funcionario = new Funcionario();
-            using(var mult = _connection.QueryMultiple(query, new { id }))
+            using (var mult = _connection.QueryMultiple(query, new { id }))
             {
                 funcionario = mult.Read<Funcionario>().FirstOrDefault();
                 if (funcionario != null)
                 {
                     funcionario.TreinamentosRealizados = mult.Read<TreinamentosRealizados>().ToList();
+                    funcionario.Parentescos = mult.Read<Parentesco>().ToList();
+
                 }
             }
             return funcionario;
-<<<<<<< HEAD
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
         }
+
 
 
     }
 }
+

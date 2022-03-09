@@ -25,7 +25,7 @@ namespace Gefun.UI
             var atualizador = new AtualizadorDb();
             atualizador.ValidaBanco();
 
-            Application.Run(new MenuPrincipal());
+            Application.Run(new NovoMenuPrincipal());
         
         }
     }

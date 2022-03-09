@@ -30,94 +30,57 @@ namespace Gefun.UI.Cadastro
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormacao));
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-<<<<<<< HEAD
-<<<<<<< HEAD
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.formacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-=======
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.memoEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource)).BeginInit();
-=======
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-            this.bindingFormacao = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
-            this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-<<<<<<< HEAD
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.bindingFormacao)).BeginInit();
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.bindingFormacao)).BeginInit();
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.Controls.Add(this.textEdit1);
             this.dataLayoutControl1.Controls.Add(this.simpleButton1);
-            this.dataLayoutControl1.Controls.Add(this.memoEdit1);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.Root;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(380, 236);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(298, 268);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+            // textEdit1
+            // 
+            this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.formacaoBindingSource, "Descricao", true));
+            this.textEdit1.Location = new System.Drawing.Point(71, 12);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(215, 20);
+            this.textEdit1.StyleController = this.dataLayoutControl1;
+            this.textEdit1.TabIndex = 4;
+            // 
             // formacaoBindingSource
             // 
             this.formacaoBindingSource.DataSource = typeof(Gefun.Dominio.Classe.Cadastro.Formacao);
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(274, 36);
-=======
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-            // memoEdit1
-            // 
-            this.memoEdit1.Location = new System.Drawing.Point(70, 12);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(298, 186);
-            this.memoEdit1.StyleController = this.dataLayoutControl1;
-            this.memoEdit1.TabIndex = 4;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(274, 202);
-<<<<<<< HEAD
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+            this.simpleButton1.Location = new System.Drawing.Point(201, 234);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(94, 22);
+            this.simpleButton1.Size = new System.Drawing.Size(85, 22);
             this.simpleButton1.StyleController = this.dataLayoutControl1;
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Cadastrar";
@@ -130,28 +93,27 @@ namespace Gefun.UI.Cadastro
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.emptySpaceItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(380, 236);
+            this.Root.Size = new System.Drawing.Size(298, 268);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.memoEdit1;
+            this.layoutControlItem1.Control = this.textEdit1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(360, 24);
-            this.layoutControlItem1.Text = "Descrição";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(46, 13);
+            this.layoutControlItem1.Size = new System.Drawing.Size(278, 24);
+            this.layoutControlItem1.Text = "Formação";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(47, 13);
             // 
             // layoutControlItem2
-<<<<<<< HEAD
-<<<<<<< HEAD
             // 
             this.layoutControlItem2.Control = this.simpleButton1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(262, 24);
+            this.layoutControlItem2.Location = new System.Drawing.Point(189, 222);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(98, 192);
+            this.layoutControlItem2.Size = new System.Drawing.Size(89, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -160,70 +122,35 @@ namespace Gefun.UI.Cadastro
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 24);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(262, 192);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(278, 198);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // memoEdit1
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+            // emptySpaceItem2
             // 
-            this.memoEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.formacaoBindingSource, "Descricao", true));
-            this.memoEdit1.Location = new System.Drawing.Point(70, 12);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(298, 20);
-            this.memoEdit1.StyleController = this.dataLayoutControl1;
-            this.memoEdit1.TabIndex = 4;
-            // 
-            // emptySpaceItem1
-=======
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 190);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(262, 26);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 190);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(262, 26);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 222);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(189, 26);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmFormacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 236);
+            this.ClientSize = new System.Drawing.Size(298, 268);
             this.Controls.Add(this.dataLayoutControl1);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmFormacao.IconOptions.SvgImage")));
             this.Name = "frmFormacao";
             this.Text = "Cadastro de formação";
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource)).EndInit();
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.bindingFormacao)).EndInit();
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
-            ((System.ComponentModel.ISupportInitialize)(this.bindingFormacao)).EndInit();
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,19 +159,12 @@ namespace Gefun.UI.Cadastro
 
         private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-<<<<<<< HEAD
-<<<<<<< HEAD
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private System.Windows.Forms.BindingSource formacaoBindingSource;
-        private DevExpress.XtraEditors.TextEdit memoEdit1;
-=======
-        private System.Windows.Forms.BindingSource bindingFormacao;
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
-=======
-        private System.Windows.Forms.BindingSource bindingFormacao;
->>>>>>> f9094f20e329a39ef9df2daf1b7482b87366f89c
     }
 }

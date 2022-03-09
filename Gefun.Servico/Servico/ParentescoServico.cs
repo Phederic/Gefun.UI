@@ -10,9 +10,11 @@ namespace Gefun.Servico.Servico
 {
     public class ParentescoServico : ServicoBase<Parentesco, ParentescoRepositorio>
     {
-        public List<Parentesco> PorFuncionario(int id)
+        public ParentescoServico()
         {
-            return _repositorio.PorFuncionario(id);
+            _repositorio = new ParentescoRepositorio();
         }
+        public List<Parentesco> PorFuncionario(int id) => _repositorio.PorFuncionario(id);
+      
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Gefun.Dominio.Classe
 {
-    [Table("Nome")]
+    [Table("Funcionario")]
     public class Funcionario : EntidadeBase
     {
         public const int NomeTamanhoMax = 150;
@@ -19,7 +19,7 @@ namespace Gefun.Dominio.Classe
         [DisplayName("Nome")]
         public string Nome { get; set; }
         [DisplayName("Data de nascimento")]
-        public DateTime DataDeNascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
         [DisplayName("CPF")]
         public string CPF { get; set; }
         [DisplayName("Sexo")]

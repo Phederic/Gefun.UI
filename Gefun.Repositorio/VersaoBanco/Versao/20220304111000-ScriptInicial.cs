@@ -1,4 +1,7 @@
-﻿using Gefun.Repositorio.VersaoBanco.Base;
+﻿using Gefun.Dominio.Base;
+using Gefun.Dominio.Classe;
+using Gefun.Dominio.Classe.Cadastro;
+using Gefun.Repositorio.VersaoBanco.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,25 +14,25 @@ namespace Gefun.Repositorio.VersaoBanco.Versao
     {
         public override string SQL()
         {
-            string sql = @"
+            string sql = $@"
     
     CREATE TABLE Formacao(
         [Id] int IDENTITY(1,1) not null,
-        [Descricao] varchar(150) not NULL
+        [Descricao] varchar({Formacao.MaxDescricao}) not NULL
 
         CONSTRAINT [PK_Formacao] PRIMARY KEY CLUSTERED ([Id])
 );
 
     CREATE TABLE Cidades(
         [Id] int IDENTITY(1,1) not null,
-        [Descricao] varchar(150) not NULL
+        [Descricao] varchar({Cidades.MaxDescricao}) not NULL
 
         CONSTRAINT [PK_Cidades] PRIMARY KEY CLUSTERED ([Id])
 );
 
     CREATE TABLE Treinamentos(
         [Id] int IDENTITY(1,1) not null,
-        [Descricao] varchar(150) not NULL
+        [Descricao] varchar({Treinamentos.MaxDescricao}) not NULL
 
         CONSTRAINT [PK_Treinamentos] PRIMARY KEY CLUSTERED ([Id])
 );
@@ -41,14 +44,14 @@ namespace Gefun.Repositorio.VersaoBanco.Versao
 
     CREATE TABLE Funcionario (
         [Id] int IDENTITY(1,1) not null,
-        [Nome] varchar(150) not null,
+        [Nome] varchar({Funcionario.NomeTamanhoMax}) not null,
         [DataNascimento] DATETIME not null,
         [CPF] varchar(20) not null,
         [Sexo] int,
         [EstadoCivil] int,
         [FormacaoId] int not null,
-        [Email] varchar(150) ,
-        [Observacao] text,
+        [Email] varchar({Funcionario.EmailTamanhoMax}) ,
+        [Observacao] {Funcionario.ObservacaoTamanhoMax},
 
         CONSTRAINT [PK_Funcionario] PRIMARY KEY CLUSTERED ([Id]),
         CONSTRAINT [PK_Funcionario_FormacaoId] FOREIGN KEY ([FormacaoId]) REFERENCES [Formacao]([Id])
@@ -68,7 +71,7 @@ namespace Gefun.Repositorio.VersaoBanco.Versao
     CREATE table Parentesco(
         [Id] int IDENTITY(1,1) not null,
         [FuncionarioId] int not null,
-        [Nome] varchar(150) not null,
+        [Nome] varchar({Parentesco.NomeTamanhoMax}) not null,
         [Tipo] int,
         [CidadeId] int not null,
 
