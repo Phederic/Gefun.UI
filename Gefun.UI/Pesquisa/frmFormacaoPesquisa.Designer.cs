@@ -82,6 +82,7 @@ namespace Gefun.UI.Pesquisa
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // formacaoBindingSource
             // 
@@ -100,6 +101,7 @@ namespace Gefun.UI.Pesquisa
             // 
             this.colDescricao.FieldName = "Descricao";
             this.colDescricao.Name = "colDescricao";
+            this.colDescricao.OptionsColumn.AllowEdit = false;
             this.colDescricao.Visible = true;
             this.colDescricao.VisibleIndex = 0;
             // 
@@ -107,6 +109,7 @@ namespace Gefun.UI.Pesquisa
             // 
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
+            this.colId.OptionsColumn.AllowEdit = false;
             this.colId.Visible = true;
             this.colId.VisibleIndex = 1;
             // 
@@ -164,6 +167,7 @@ namespace Gefun.UI.Pesquisa
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5)});
+            this.bar1.OptionsBar.UseWholeRow = true;
             this.bar1.Text = "Tools";
             // 
             // barButtonItem1

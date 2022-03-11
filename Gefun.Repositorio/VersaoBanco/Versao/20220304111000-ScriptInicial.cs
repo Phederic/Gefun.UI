@@ -2,11 +2,6 @@
 using Gefun.Dominio.Classe;
 using Gefun.Dominio.Classe.Cadastro;
 using Gefun.Repositorio.VersaoBanco.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gefun.Repositorio.VersaoBanco.Versao
 {
@@ -25,14 +20,14 @@ namespace Gefun.Repositorio.VersaoBanco.Versao
 
     CREATE TABLE Cidades(
         [Id] int IDENTITY(1,1) not null,
-        [Descricao] varchar({Cidades.MaxDescricao}) not NULL
+        [Descricao] varchar({Cidade.MaxDescricao}) not NULL
 
         CONSTRAINT [PK_Cidades] PRIMARY KEY CLUSTERED ([Id])
 );
 
     CREATE TABLE Treinamentos(
         [Id] int IDENTITY(1,1) not null,
-        [Descricao] varchar({Treinamentos.MaxDescricao}) not NULL
+        [Descricao] varchar({Treinamento.MaxDescricao}) not NULL
 
         CONSTRAINT [PK_Treinamentos] PRIMARY KEY CLUSTERED ([Id])
 );
@@ -51,7 +46,7 @@ namespace Gefun.Repositorio.VersaoBanco.Versao
         [EstadoCivil] int,
         [FormacaoId] int not null,
         [Email] varchar({Funcionario.EmailTamanhoMax}) ,
-        [Observacao] {Funcionario.ObservacaoTamanhoMax},
+        [Observacao] varchar ({Funcionario.ObservacaoTamanhoMax}),
 
         CONSTRAINT [PK_Funcionario] PRIMARY KEY CLUSTERED ([Id]),
         CONSTRAINT [PK_Funcionario_FormacaoId] FOREIGN KEY ([FormacaoId]) REFERENCES [Formacao]([Id])
@@ -84,6 +79,7 @@ namespace Gefun.Repositorio.VersaoBanco.Versao
         [Id] int IDENTITY(1,1) not null,
         [FuncionarioId] int not null,
         [Arquivo] varbinary(MAX),
+        [NomeArquivo] VARCHAR(150)
 
         CONSTRAINT [PK_Anexo] PRIMARY key CLUSTERED ([Id]),
         CONSTRAINT [PK_Anexo_FuncionarioId] FOREIGN key ([FuncionarioId]) REFERENCES [Funcionario]([Id])

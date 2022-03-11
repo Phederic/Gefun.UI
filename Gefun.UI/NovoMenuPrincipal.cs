@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Gefun.UI
 {
-    public partial class NovoMenuPrincipal : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class GeFun : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public NovoMenuPrincipal()
+        public GeFun()
         {
             InitializeComponent();
         }
@@ -39,5 +39,6 @@ namespace Gefun.UI
             frm.MdiParent = this;
             frm.Show();
         }
+
     }
 }

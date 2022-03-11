@@ -1,5 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using Gefun.Dominio.Classe.Cadastro;
+using Gefun.Repositorio.Base;
+using Gefun.Servico.Interface;
 using Gefun.Servico.Servico;
 using Gefun.UI.Cadastro;
 using System;
@@ -16,11 +18,11 @@ namespace Gefun.UI.Pesquisa
 {
     public partial class frmCidadePesquisa : DevExpress.XtraEditors.XtraForm
     {
-        private CidadeServico _cidadeServico;
+        private ICidadeServico _cidadeServico = GerenciadorDependencia.ObterInstancia<ICidadeServico>();
 
-        public IEnumerable<Cidades> Cidades
+        public IEnumerable<Cidade> Cidades
         {
-            get => cidadesBindingSource.DataSource as IEnumerable<Cidades>;
+            get => cidadesBindingSource.DataSource as IEnumerable<Cidade>;
             set => cidadesBindingSource.DataSource = value;
         }
 
@@ -28,7 +30,6 @@ namespace Gefun.UI.Pesquisa
         public frmCidadePesquisa()
         {
             InitializeComponent();
-            _cidadeServico = new CidadeServico();
             Pesquisar();
 
         }
@@ -85,7 +86,7 @@ namespace Gefun.UI.Pesquisa
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var linha = (Cidades)gridView1.GetRow(gridView1.FocusedRowHandle);
+            var linha = (Cidade)gridView1.GetRow(gridView1.FocusedRowHandle);
             {
                 if (linha == null)
                     return;
@@ -94,12 +95,19 @@ namespace Gefun.UI.Pesquisa
                 {
                     if (linha.Id > 0)
                     {
-                        var _repositorioCidade = new CidadeServico();
-                        _repositorioCidade.Excluir(linha.Id);
+                        _cidadeServico.Excluir(linha.Id);
                     }
                 }
                 Pesquisar();
             }
+        }
+
+        private void gridControl1_DoubleClick(object sender, EventArgs e)
+        {
+            var linha = (Cidade)gridView1.GetFocusedRow();
+            var frm = new frmCidades(linha);
+            frm.ShowDialog();
+            Pesquisar();
         }
     }
 }

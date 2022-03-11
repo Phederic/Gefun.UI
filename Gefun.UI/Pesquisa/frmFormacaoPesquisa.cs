@@ -1,5 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using Gefun.Dominio.Classe.Cadastro;
+using Gefun.Repositorio.Base;
+using Gefun.Servico.Interface;
 using Gefun.Servico.Servico;
 using Gefun.UI.Cadastro;
 using System;
@@ -16,7 +18,7 @@ namespace Gefun.UI.Pesquisa
 {
     public partial class frmFormacaoPesquisa : DevExpress.XtraEditors.XtraForm
     {
-        private FormacaoServico _formacaoServico;
+        private IFormacaoServico _formacaoServico = GerenciadorDependencia.ObterInstancia<IFormacaoServico>();
 
         public IEnumerable<Formacao> Formacao
         {
@@ -27,7 +29,6 @@ namespace Gefun.UI.Pesquisa
         public frmFormacaoPesquisa()
         {
             InitializeComponent();
-            _formacaoServico = new FormacaoServico();
             Pesquisar();
 
         }
@@ -56,10 +57,11 @@ namespace Gefun.UI.Pesquisa
                     {
                         if (linha.Id > 0)
                         {
-                            var _repositorioFormacao = new FormacaoServico();
-                            _repositorioFormacao.Excluir(linha.Id);
+                            _formacaoServico.Excluir(linha.Id);
                         }
                     }
+                    if (result == DialogResult.No)
+                        return;
                     Pesquisar();
                 }
 
@@ -103,6 +105,14 @@ namespace Gefun.UI.Pesquisa
                     View.ExportToPdf("ListaFormacao.pdf");
                 }
             }
+        }
+
+        private void gridControl1_DoubleClick(object sender, EventArgs e)
+        {
+            var linha = (Formacao)gridView1.GetFocusedRow();
+            var frm = new frmFormacao(linha);
+            frm.ShowDialog();
+            Pesquisar();
         }
     }
 }

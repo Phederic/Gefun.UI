@@ -1,13 +1,9 @@
 ﻿using Dapper;
-using Dapper.Contrib.Extensions;
 using Gefun.Repositorio.Configuracao;
 using Gefun.Repositorio.VersaoBanco.Versao;
 using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Gefun.Repositorio.VersaoBanco.Atualizador
 {
@@ -81,9 +77,9 @@ namespace Gefun.Repositorio.VersaoBanco.Atualizador
                 {
                     myCommand.ExecuteNonQuery();
                 }
-                catch (Exception ex)
+                catch 
                 {
-                    throw new Exception("Erro ao criar Tabelas", ex);
+                    
                 }
             }
         }

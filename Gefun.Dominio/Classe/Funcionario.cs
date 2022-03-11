@@ -36,7 +36,7 @@ namespace Gefun.Dominio.Classe
         [Computed]
         public List<Parentesco> Parentescos { get; set; } = new List<Parentesco>();
         [Computed]
-        public List<TreinamentosRealizados> TreinamentosRealizados { get; set; } = new List<TreinamentosRealizados>();
+        public List<TreinamentoRealizado> TreinamentosRealizados { get; set; } = new List<TreinamentoRealizado>();
         [Computed]
         public List<Anexo> Anexos { get; set; } = new List<Anexo>();
     }

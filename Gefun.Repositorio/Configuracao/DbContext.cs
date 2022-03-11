@@ -5,9 +5,7 @@ namespace Gefun.Repositorio.Configuracao
 {
     public static class DbContext
     {
-        public static SqlConnection ObterConexao() 
-        {
-            return new SqlConnection(ConfigurationManager.ConnectionStrings["conexaoSqlServer"].ConnectionString);
-        }
+        public static SqlConnection ObterConexao() => new SqlConnection(ConfigurationManager.ConnectionStrings["conexaoSqlServer"].ConnectionString);
+
     }
 }

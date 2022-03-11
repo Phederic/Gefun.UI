@@ -16,5 +16,7 @@ namespace Gefun.Dominio.Classe
         public int FuncionarioId { get; set; }
         [DisplayName("Arquivo")]
         public byte[] Arquivo{ get; set; }
+        [DisplayName("Nome do Arquivo")]
+        public string NomeArquivo { get; set; }
     }
 }

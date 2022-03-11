@@ -19,13 +19,11 @@ namespace Gefun.Servico.Base
 
         public ServicoBase()
         {
-            //_repositorio = GerenciadorDependencia.ObterInstancia<TRepositorio>();
+            _repositorio = GerenciadorDependencia.ObterInstancia<TRepositorio>();
         }
 
-        public ServicoBase(TRepositorio repositorio)
-        {
-            _repositorio = repositorio;
-        }
+        public ServicoBase(TRepositorio repositorio) => _repositorio = repositorio;
+
     }
 
     public abstract class ServicoBase<T, TRepositorio> : ServicoBase<TRepositorio>, IServico<T>
@@ -56,6 +54,7 @@ namespace Gefun.Servico.Base
 
             {
                 myConn.Open();
+                Validar(obj);
                 PreInserirEAtualizar(obj);
                 obj = Inserindo(obj);
                 PosInserirEAtualizar(obj);
@@ -68,12 +67,17 @@ namespace Gefun.Servico.Base
             using (var myConn = DbContext.ObterConexao())
             {
                 myConn.Open();
+                Validar(obj);
                 PreInserirEAtualizar(obj);
                 obj = Atualizando(obj);
-                PosInserirEAtualizar(obj);
-                
+                PosInserirEAtualizar(obj);                
                 return obj;
             }
+        }
+
+        protected virtual void Validar(T entidade)
+        {
+            GerenciadorValidacao<T>.AssertValidacao(entidade);
         }
 
         public virtual void PreInserirEAtualizar(T obj) { }
@@ -90,29 +94,19 @@ namespace Gefun.Servico.Base
             };
         }
 
-        public T Obter(int id)
-        {
-            return Obtendo(id);
-        }
+        public T Obter(int id) => Obtendo(id);
 
-        protected virtual T Atualizando(T obj)
-        {
-            return _repositorio.Atualizar(obj);
-        }
 
-        protected virtual void Excluindo(int id)
-        {
-            _repositorio.Excluir(id);
-        }
+        protected virtual T Atualizando(T obj) => _repositorio.Atualizar(obj);
 
-        protected virtual T Inserindo(T obj)
-        {
-            return _repositorio.Inserir(obj);
-        }
 
-        protected virtual T Obtendo(int id)
-        {
-            return _repositorio.Obter(id);
-        }
+        protected virtual void Excluindo(int id) => _repositorio.Excluir(id);
+
+
+        protected virtual T Inserindo(T obj) => _repositorio.Inserir(obj);
+
+
+        protected virtual T Obtendo(int id) =>  _repositorio.Obter(id);
+
     }
 }

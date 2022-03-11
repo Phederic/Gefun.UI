@@ -1,34 +1,18 @@
-﻿using Dapper;
-using Gefun.Dominio.Base;
-using Gefun.Dominio.Classe;
+﻿using Gefun.Dominio.Classe;
+using Gefun.Repositorio.Base;
 using Gefun.Repositorio.Base.Repository;
 using Gefun.Servico.Base;
 using Gefun.Servico.Interface;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 namespace Gefun.Servico.Servico
 {
     public class FuncionarioServico : ServicoBase<Funcionario, FuncionarioRepositorio>, IFuncionarioServico
     {
-        private ParentescoServico _servicoParentesco;
-        private AnexoServico _anexoServico;
-        private TreinamentosRealizadosServico _treinamentosRealizadosServico;
+        private IParentescoServico _servicoParentesco = GerenciadorDependencia.ObterInstancia<IParentescoServico>();
+        private IAnexoServico _anexoServico = GerenciadorDependencia.ObterInstancia<IAnexoServico>();
+        private ITreinamentoRealizadoServico _treinamentosRealizadosServico = GerenciadorDependencia.ObterInstancia<ITreinamentoRealizadoServico>();
 
-        public FuncionarioServico()
-        {
-            _repositorio = new FuncionarioRepositorio();
-            _servicoParentesco = new ParentescoServico();
-            _treinamentosRealizadosServico = new TreinamentosRealizadosServico();
-            _anexoServico = new AnexoServico();
-        }
-
-        public List<Funcionario> Todos()
-        {
-            return _repositorio.Todos();
-        }
+        public List<Funcionario> Todos() => _repositorio.Todos();
 
         public override void PosInserirEAtualizar(Funcionario obj)
         {
@@ -85,27 +69,6 @@ namespace Gefun.Servico.Servico
             return obj;
         }
 
-        public Funcionario ObterCompleto(int id)
-        {
-            string query = @"
-            SELECT * FROM Funcionario WHERE Id= @id;
-            SELECT * FROM Parentesco WHERE Id= @id;
-            SELECT * FROM TreinamentosRealizados WHERE Id=@id;
-            ";
-
-            var funcionario = new Funcionario();
-            using (var mult = _connection.QueryMultiple(query, new { id }))
-            {
-                funcionario = mult.Read<Funcionario>().FirstOrDefault();
-                if (funcionario != null)
-                {
-                    funcionario.TreinamentosRealizados = mult.Read<TreinamentosRealizados>().ToList();
-                    funcionario.Parentescos = mult.Read<Parentesco>().ToList();
-
-                }
-            }
-            return funcionario;
-        }
 
 
 

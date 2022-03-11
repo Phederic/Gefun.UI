@@ -3,21 +3,25 @@ using Gefun.Dominio.Base;
 using Gefun.Dominio.Classe;
 using Gefun.Dominio.Classe.Cadastro;
 using Gefun.Dominio.Classe.Enum;
-
+using Gefun.Repositorio.Base;
+using Gefun.Servico.Interface;
 using Gefun.Servico.Servico;
 using Gefun.UI.Cadastro;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Gefun.UI
 {
     public partial class frmFuncionario : DevExpress.XtraEditors.XtraForm
     {
-        private FuncionarioServico _servicoFuncionario;
-        private FormacaoServico _servicoFormacao;
-        private CidadeServico _cidadeServico;
-        private TreinamentoServico _treinamentoServico;
-        private TreinamentosRealizadosServico _treinamentosRealizadosServico;
+        private IFuncionarioServico _servicoFuncionario = GerenciadorDependencia.ObterInstancia<IFuncionarioServico>();
+        private IFormacaoServico _servicoFormacao = GerenciadorDependencia.ObterInstancia<IFormacaoServico>();
+        private ICidadeServico _cidadeServico = GerenciadorDependencia.ObterInstancia<ICidadeServico>();
+        private ITreinamentoServico _treinamentoServico = GerenciadorDependencia.ObterInstancia<ITreinamentoServico>();
+        private ITreinamentoRealizadoServico _treinamentosRealizadosServico = GerenciadorDependencia.ObterInstancia<ITreinamentoRealizadoServico>();
+        private IAnexoServico _anexoServico = GerenciadorDependencia.ObterInstancia<IAnexoServico>();
+        private IParentescoServico _parentescoServico = GerenciadorDependencia.ObterInstancia<IParentescoServico>();
 
         public Funcionario Funcionario
         {
@@ -25,17 +29,12 @@ namespace Gefun.UI
             set => funcionarioBindingSource.DataSource = value;
         }
 
-
-
         public frmFuncionario()
         {
+
             InitializeComponent();
-            _servicoFuncionario = new FuncionarioServico();
-            _servicoFormacao = new FormacaoServico();
-            _cidadeServico = new CidadeServico();
-            _treinamentoServico = new TreinamentoServico();
-            _treinamentosRealizadosServico = new TreinamentosRealizadosServico();
             AtualizarLookup();
+
             Novo();
         }
 
@@ -43,12 +42,11 @@ namespace Gefun.UI
         {
             Text = "Alterar funcionario";
             Funcionario = _servicoFuncionario.Obter(funcionario.Id);
+            btnCadastrar.Text = "Alterar";
         }
 
-        private void Novo()
-        {
-            Funcionario = new Funcionario();
-        }
+        private void Novo() => Funcionario = new Funcionario();
+
 
         private void AtualizarLookup()
         {
@@ -58,7 +56,7 @@ namespace Gefun.UI
             lkpCidade.DataSource = _cidadeServico.Todos();
             lkpTipo.DataSource = EnumHelper.ObterLista<ETipoParentesco>();
             lkpTreinamentos.DataSource = _treinamentoServico.Todos();
-
+    
 
         }
 
@@ -74,13 +72,6 @@ namespace Gefun.UI
             frm.ShowDialog();
             AtualizarLookup();
         }
-
-        private void simpleButton1_Click_1(object sender, EventArgs e)
-        {
-            Funcionario = _servicoFuncionario.InserirOuAtualizar(Funcionario);
-            Close();
-        }
-
         private void lkpCidade_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             var frm = new frmCidades();
@@ -96,8 +87,7 @@ namespace Gefun.UI
 
             if (linha.Id > 0)
             {
-                var repositorioParentesco = new ParentescoServico();
-                repositorioParentesco.Excluir(linha.Id);
+                _parentescoServico.Excluir(linha.Id);
             }
             Funcionario.Parentescos.Remove(linha);
             funcionarioBindingSource.ResetBindings(false);
@@ -112,14 +102,13 @@ namespace Gefun.UI
 
         private void riDeletarTreinamento_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            var linha = (TreinamentosRealizados)gridView2.GetRow(gridView2.FocusedRowHandle);
+            var linha = (TreinamentoRealizado)gridView2.GetRow(gridView2.FocusedRowHandle);
             if (linha == null)
                 return;
 
             if (linha.Id > 0)
             {
-                var repositoroTreinamentosRealizados = new TreinamentosRealizadosServico();
-                repositoroTreinamentosRealizados.Excluir(linha.Id);
+                _treinamentosRealizadosServico.Excluir(linha.Id);
             }
             Funcionario.TreinamentosRealizados.Remove(linha);
             funcionarioBindingSource.ResetBindings(false);
@@ -132,5 +121,48 @@ namespace Gefun.UI
             AtualizarLookup();
 
         }
-    }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _servicoFuncionario.InserirOuAtualizar(Funcionario);
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("por favor inserir caracteres", "atenção");
+                Validar();
+            }
+        }
+
+        private bool Validar()
+        {
+            dxErrorProvider1.ClearErrors();
+            dxErrorProvider1.SetError(txtCPF, "Campo obrigatorio");
+            dxErrorProvider1.SetError(txtNome, "Campo obrigatorio");
+            
+            return dxErrorProvider1.HasErrors;
+        }
+
+
+        private void btneAnexo_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var linha = (Anexo)gridView3.GetRow(gridView3.FocusedRowHandle);
+            if (linha == null)
+            { 
+                linha = new Anexo();
+                Funcionario.Anexos.Add(linha);
+            }
+
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Multiselect = true;
+            dialog.ShowDialog();
+            linha.NomeArquivo = dialog.SafeFileName;
+            linha.Arquivo = File.ReadAllBytes(dialog.FileName);
+            funcionarioBindingSource.ResetBindings(false);
+        }
+
+
+    }  
 }

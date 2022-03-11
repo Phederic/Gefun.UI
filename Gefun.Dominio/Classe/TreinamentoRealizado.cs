@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Gefun.Dominio.Classe
 {
     [Table("TreinamentosRealizados")]
-   public class TreinamentosRealizados : EntidadeBaseLista
+   public class TreinamentoRealizado : EntidadeBaseLista
     {
         [DisplayName("Funcionario")]
         public int FuncionarioId { get; set; }

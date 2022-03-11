@@ -35,6 +35,7 @@ namespace Gefun.UI.Pesquisa
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -62,6 +63,7 @@ namespace Gefun.UI.Pesquisa
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpFormacaoId)).BeginInit();
@@ -101,22 +103,31 @@ namespace Gefun.UI.Pesquisa
             this.bar1.DockCol = 0;
             this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.HideWhenMerging = DevExpress.Utils.DefaultBoolean.False;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5)});
+            this.bar1.OptionsBar.UseWholeRow = true;
             this.bar1.Text = "Tools";
             // 
             // barButtonItem1
             // 
+            this.barButtonItem1.ActAsDropDown = true;
             this.barButtonItem1.Caption = "Novo";
+            this.barButtonItem1.DropDownControl = this.popupMenu1;
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
             // 
             // barButtonItem2
             // 
@@ -147,6 +158,8 @@ namespace Gefun.UI.Pesquisa
             // 
             // barButtonItem5
             // 
+            this.barButtonItem5.ActAsDropDown = true;
+            this.barButtonItem5.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             this.barButtonItem5.Caption = "PDF";
             this.barButtonItem5.Id = 4;
             this.barButtonItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem5.ImageOptions.SvgImage")));
@@ -199,6 +212,7 @@ namespace Gefun.UI.Pesquisa
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
@@ -224,6 +238,7 @@ namespace Gefun.UI.Pesquisa
             this.colNome.OptionsColumn.AllowEdit = false;
             this.colNome.Visible = true;
             this.colNome.VisibleIndex = 0;
+            this.colNome.Width = 110;
             // 
             // colDataDeNascimento
             // 
@@ -232,6 +247,7 @@ namespace Gefun.UI.Pesquisa
             this.colDataDeNascimento.OptionsColumn.AllowEdit = false;
             this.colDataDeNascimento.Visible = true;
             this.colDataDeNascimento.VisibleIndex = 1;
+            this.colDataDeNascimento.Width = 77;
             // 
             // colCPF
             // 
@@ -240,6 +256,7 @@ namespace Gefun.UI.Pesquisa
             this.colCPF.OptionsColumn.AllowEdit = false;
             this.colCPF.Visible = true;
             this.colCPF.VisibleIndex = 2;
+            this.colCPF.Width = 110;
             // 
             // colSexo
             // 
@@ -248,6 +265,7 @@ namespace Gefun.UI.Pesquisa
             this.colSexo.OptionsColumn.AllowEdit = false;
             this.colSexo.Visible = true;
             this.colSexo.VisibleIndex = 3;
+            this.colSexo.Width = 78;
             // 
             // colEstadoCivil
             // 
@@ -265,6 +283,7 @@ namespace Gefun.UI.Pesquisa
             this.colFormacaoId.OptionsColumn.AllowEdit = false;
             this.colFormacaoId.Visible = true;
             this.colFormacaoId.VisibleIndex = 5;
+            this.colFormacaoId.Width = 126;
             // 
             // lkpFormacaoId
             // 
@@ -282,6 +301,7 @@ namespace Gefun.UI.Pesquisa
             this.colEmail.OptionsColumn.AllowEdit = false;
             this.colEmail.Visible = true;
             this.colEmail.VisibleIndex = 6;
+            this.colEmail.Width = 108;
             // 
             // colObservacao
             // 
@@ -290,6 +310,7 @@ namespace Gefun.UI.Pesquisa
             this.colObservacao.OptionsColumn.AllowEdit = false;
             this.colObservacao.Visible = true;
             this.colObservacao.VisibleIndex = 7;
+            this.colObservacao.Width = 472;
             // 
             // colId
             // 
@@ -360,6 +381,7 @@ namespace Gefun.UI.Pesquisa
             this.Text = "Funcionario";
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpFormacaoId)).EndInit();
@@ -405,5 +427,6 @@ namespace Gefun.UI.Pesquisa
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lkpFormacaoId;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }

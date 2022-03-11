@@ -43,6 +43,12 @@
     <Reference Include="Dapper.Contrib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.Contrib.2.0.78\lib\net461\Dapper.Contrib.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.10.3.6\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=5.0.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.5.3.3\lib\net461\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -57,17 +63,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\AplicacaoException.cs" />
+    <Compile Include="Base\AplicacaoExceptionDetalhes.cs" />
+    <Compile Include="Base\GerenciadorDependencia.cs" />
+    <Compile Include="Base\GerenciadorValidacao.cs" />
+    <Compile Include="Base\IGerenciadorDependencia.cs" />
     <Compile Include="Base\IRepositorio.cs" />
+    <Compile Include="Base\ModuloDependencia.cs" />
     <Compile Include="Base\RepositorioBase.cs" />
+    <Compile Include="Base\SimpleInjectorGerenciadorDependencia.cs" />
+    <Compile Include="ModuloRepositorio.cs" />
     <Compile Include="Repositorio\AnexoRepositorio.cs" />
-    <Compile Include="Repositorio\CidadesRepositorio.cs" />
+    <Compile Include="Repositorio\CidadeRepositorio.cs" />
     <Compile Include="Repositorio\FormacaoRepositorio.cs" />
     <Compile Include="Repositorio\FuncionarioRepositorio.cs" />
     <Compile Include="Repositorio\ParentescoRepositorio.cs" />
     <Compile Include="Repositorio\TreinamentoRepositorio.cs" />
-    <Compile Include="Repositorio\TreinamentosRealizadosRepositorio.cs" />
+    <Compile Include="Repositorio\TreinamentoRealizadoRepositorio.cs" />
     <Compile Include="Configuracao\DbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validacao\AnexoValidacao.cs" />
+    <Compile Include="Validacao\CidadeValidacao.cs" />
+    <Compile Include="Validacao\FormacaoValidacao.cs" />
+    <Compile Include="Validacao\FuncionarioValidacao.cs" />
+    <Compile Include="Validacao\ParentescoValidacao.cs" />
+    <Compile Include="Validacao\TreinamentoRealizadoValidacao.cs" />
+    <Compile Include="Validacao\TreinamentoValidacao.cs" />
     <Compile Include="VersaoBanco\Atualizador\AtualizadorDb.cs" />
     <Compile Include="VersaoBanco\Base\MigrationBase.cs" />
     <Compile Include="VersaoBanco\Versao\20220304111000-ScriptInicial.cs" />

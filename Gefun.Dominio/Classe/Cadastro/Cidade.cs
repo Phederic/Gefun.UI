@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Gefun.Dominio.Classe.Cadastro
 {
         [Table("Cidades")]
-      public class Cidades : EntidadeBase
+      public class Cidade : EntidadeBase
     {
         public const int MaxDescricao = 150;
         [DisplayName("Descrição")]

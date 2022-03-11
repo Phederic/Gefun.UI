@@ -1,22 +1,19 @@
 ﻿using Dapper.Contrib.Extensions;
 using Gefun.Dominio.Classe.Cadastro;
 using Gefun.Repositorio.Configuracao;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gefun.Repositorio.Base.Repositorio
 {
-    public class TreinamentoRepositorio : RepositorioBase<Treinamentos>
+    public class TreinamentoRepositorio : RepositorioBase<Treinamento>
     {
-        public List<Treinamentos> Todos()
+        public List<Treinamento> Todos()
         {
             using(var myConn = DbContext.ObterConexao())
             {
                 myConn.Open();
-                return myConn.GetAll<Treinamentos>().ToList();
+                return myConn.GetAll<Treinamento>().ToList();
             }
         }
     }

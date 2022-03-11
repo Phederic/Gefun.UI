@@ -1,7 +1,9 @@
 ﻿using Dapper.Contrib.Extensions;
 using Gefun.Dominio.Base;
 using Gefun.Repositorio.Configuracao;
+using System;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Gefun.Repositorio.Base
 {
@@ -11,9 +13,10 @@ namespace Gefun.Repositorio.Base
 
         T IRepositorio<T>.Inserir(T obj)
         {
-            var id = (int)_connection.Insert<T>(obj);
-            obj.Id = id;
-            return obj;
+
+             var id = (int)_connection.Insert<T>(obj);
+             obj.Id = id;
+             return obj;
         }
 
         T IRepositorio<T>.Atualizar(T obj)
@@ -25,12 +28,18 @@ namespace Gefun.Repositorio.Base
         public void Excluir(int id)
         {
             var obj = Obter(id);
-            _connection.Delete<T>(obj);
+            try
+            {
+                _connection.Delete<T>(obj);
+            }
+            catch 
+            {
+                MessageBox.Show("Não é possivel deletar, pois existe um funcionaro relacionado a ele.", "ATENÇÃO");
+            }
         }
 
-        public T Obter(int id)
-        {
-            return _connection.Get<T>(id);
+        public T Obter(int id) => _connection.Get<T>(id);
         }       
+    
     }
-}
+

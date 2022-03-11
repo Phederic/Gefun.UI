@@ -67,11 +67,11 @@
     <Compile Include="Classe\Enum\ESexo.cs" />
     <Compile Include="Classe\Enum\ETipoParentesco.cs" />
     <Compile Include="Classe\Cadastro\Parentesco.cs" />
-    <Compile Include="Classe\Cadastro\Cidades.cs" />
+    <Compile Include="Classe\Cadastro\Cidade.cs" />
     <Compile Include="Classe\Cadastro\Formacao.cs" />
-    <Compile Include="Classe\Cadastro\Treinamentos.cs" />
+    <Compile Include="Classe\Cadastro\Treinamento.cs" />
     <Compile Include="Classe\Funcionario.cs" />
-    <Compile Include="Classe\TreinamentosRealizados.cs" />
+    <Compile Include="Classe\TreinamentoRealizado.cs" />
     <Compile Include="Helper\EnumHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helper\ReflectionHelper.cs" />

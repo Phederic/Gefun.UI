@@ -1,5 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using Gefun.Dominio.Classe;
+using Gefun.Repositorio.Base;
+using Gefun.Servico.Interface;
 using Gefun.Servico.Servico;
 using System;
 using System.Collections.Generic;
@@ -15,8 +17,8 @@ namespace Gefun.UI.Pesquisa
 {
     public partial class frmFuncionarioPesquisa : DevExpress.XtraEditors.XtraForm
     {
-        private FuncionarioServico _funcionarioServico;
-        private FormacaoServico _formacaoServico;
+        private IFuncionarioServico _funcionarioServico = GerenciadorDependencia.ObterInstancia<IFuncionarioServico>();
+        private IFormacaoServico _formacaoServico = GerenciadorDependencia.ObterInstancia<IFormacaoServico>();
 
         public IEnumerable<Funcionario> Funcionario
         {
@@ -27,8 +29,7 @@ namespace Gefun.UI.Pesquisa
         public frmFuncionarioPesquisa()
         {
             InitializeComponent();
-            _funcionarioServico = new FuncionarioServico();
-            _formacaoServico = new FormacaoServico();
+  
             CarregarLookup();
             Pesquisar();
         }
@@ -92,8 +93,7 @@ namespace Gefun.UI.Pesquisa
             {
                 if (linha.Id > 0)
                 {
-                    var repositorioFuncionario = new FuncionarioServico();
-                    repositorioFuncionario.Excluir(linha.Id);
+                    _funcionarioServico.Excluir(linha.Id);
                 }
                 Pesquisar();
             }
@@ -111,6 +111,11 @@ namespace Gefun.UI.Pesquisa
                     View.ExportToPdf("ListaFuncionario.pdf");
                 }
             }
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

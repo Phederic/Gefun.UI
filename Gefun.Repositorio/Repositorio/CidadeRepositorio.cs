@@ -1,22 +1,19 @@
 ﻿using Dapper.Contrib.Extensions;
 using Gefun.Dominio.Classe.Cadastro;
 using Gefun.Repositorio.Configuracao;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gefun.Repositorio.Base.Repositorio
 {
-    public class CidadesRepositorio : RepositorioBase<Cidades>
+    public class CidadesRepositorio : RepositorioBase<Cidade>
     {
-        public List<Cidades> Todos()
+        public List<Cidade> Todos()
         {
             using (var myConn = DbContext.ObterConexao())
             {
                 myConn.Open();
-                return myConn.GetAll<Cidades>().ToList();
+                return myConn.GetAll<Cidade>().ToList();
             }
         }
     }

@@ -66,17 +66,17 @@
     <Compile Include="Interface\IFormacaoServico.cs" />
     <Compile Include="Interface\IFuncionarioServico.cs" />
     <Compile Include="Interface\IParentescoServico.cs" />
-    <Compile Include="Interface\ITreinamentosRealizadosServico.cs" />
-    <Compile Include="Interface\ITreinametosServico.cs" />
+    <Compile Include="Interface\ITreinamentoRealizadoServico.cs" />
+    <Compile Include="Interface\ITreinamentoServico.cs" />
+    <Compile Include="ModuloServicos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servico\AnexoServico.cs" />
     <Compile Include="Servico\CidadeServico.cs" />
     <Compile Include="Servico\FormacaoServico.cs" />
     <Compile Include="Servico\FuncionarioServico.cs" />
     <Compile Include="Servico\ParentescoServico.cs" />
-    <Compile Include="Servico\ServicoRepositorio.cs" />
     <Compile Include="Servico\TreinamentoServico.cs" />
-    <Compile Include="Servico\TreinamentosRealizadosServico.cs" />
+    <Compile Include="Servico\TreinamentoRealizadoServico.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
