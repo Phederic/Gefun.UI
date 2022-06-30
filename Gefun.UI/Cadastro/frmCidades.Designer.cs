@@ -33,6 +33,7 @@ namespace Gefun.UI.Cadastro
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCidades));
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.txtCidade = new DevExpress.XtraEditors.TextEdit();
+            this.cidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnCadastrar = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -40,17 +41,16 @@ namespace Gefun.UI.Cadastro
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.cidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCidade.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cidadesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cidadesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -73,6 +73,10 @@ namespace Gefun.UI.Cadastro
             this.txtCidade.Size = new System.Drawing.Size(231, 20);
             this.txtCidade.StyleController = this.dataLayoutControl1;
             this.txtCidade.TabIndex = 4;
+            // 
+            // cidadesBindingSource
+            // 
+            this.cidadesBindingSource.DataSource = typeof(Gefun.Dominio.Classe.Cadastro.Cidade);
             // 
             // btnCadastrar
             // 
@@ -138,10 +142,6 @@ namespace Gefun.UI.Cadastro
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // cidadesBindingSource
-            // 
-            this.cidadesBindingSource.DataSource = typeof(Gefun.Dominio.Classe.Cadastro.Cidade);
-            // 
             // frmCidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,13 +154,13 @@ namespace Gefun.UI.Cadastro
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtCidade.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cidadesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cidadesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

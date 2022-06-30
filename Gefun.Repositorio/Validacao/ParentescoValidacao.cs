@@ -13,7 +13,6 @@ namespace Gefun.Repositorio.Validacao
         public ParentescoValidacao()
         {
             RuleFor(x => x.Nome).MaximumLength(Parentesco.NomeTamanhoMax);
-            RuleFor(x => x.Tipo).NotEmpty();
             RuleFor(x => x.Tipo).NotNull();
 
         }

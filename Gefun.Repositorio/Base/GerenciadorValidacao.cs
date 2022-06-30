@@ -35,11 +35,7 @@ namespace Gefun.Repositorio.Base
         {
             var resultados = Validar(entidade);
             if (resultados != null && resultados.Count() > 0)
-                try
-                {
-                    throw new AplicacaoException(resultados);
-                }
-                catch { }
+                throw new AplicacaoException(resultados);             
         }
 
         public static IValidator<TEntidade> ObterValidador<TEntidade>() where TEntidade : class => GerenciadorDependencia.ObterInstanciaSeRegistrado<IValidator<TEntidade>>();

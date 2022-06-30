@@ -1,11 +1,9 @@
 
 using Gefun.Dominio.Base;
 using Gefun.Dominio.Classe;
-using Gefun.Dominio.Classe.Cadastro;
 using Gefun.Dominio.Classe.Enum;
 using Gefun.Repositorio.Base;
 using Gefun.Servico.Interface;
-using Gefun.Servico.Servico;
 using Gefun.UI.Cadastro;
 using System;
 using System.IO;
@@ -23,6 +21,7 @@ namespace Gefun.UI
         private IAnexoServico _anexoServico = GerenciadorDependencia.ObterInstancia<IAnexoServico>();
         private IParentescoServico _parentescoServico = GerenciadorDependencia.ObterInstancia<IParentescoServico>();
 
+
         public Funcionario Funcionario
         {
             get => funcionarioBindingSource.DataSource as Funcionario;
@@ -36,6 +35,8 @@ namespace Gefun.UI
             AtualizarLookup();
 
             Novo();
+
+            tabbedControlGroup1.SelectedTabPage = layoutControlGroup1;
         }
 
         public frmFuncionario(Funcionario funcionario) : this()
@@ -56,7 +57,7 @@ namespace Gefun.UI
             lkpCidade.DataSource = _cidadeServico.Todos();
             lkpTipo.DataSource = EnumHelper.ObterLista<ETipoParentesco>();
             lkpTreinamentos.DataSource = _treinamentoServico.Todos();
-    
+
 
         }
 
@@ -81,7 +82,7 @@ namespace Gefun.UI
 
         private void riDeletar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            var linha = (Parentesco)gridView1.GetRow(gridView1.FocusedRowHandle);
+            var linha = (Parentesco)gridParentesco.GetRow(gridParentesco.FocusedRowHandle);
             if (linha == null)
                 return;
 
@@ -102,10 +103,9 @@ namespace Gefun.UI
 
         private void riDeletarTreinamento_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            var linha = (TreinamentoRealizado)gridView2.GetRow(gridView2.FocusedRowHandle);
+            var linha = (TreinamentoRealizado)gridTreinamentos.GetRow(gridTreinamentos.FocusedRowHandle);
             if (linha == null)
                 return;
-
             if (linha.Id > 0)
             {
                 _treinamentosRealizadosServico.Excluir(linha.Id);
@@ -126,31 +126,36 @@ namespace Gefun.UI
         {
             try
             {
-                _servicoFuncionario.InserirOuAtualizar(Funcionario);
-                Close();
+                if (!Validar())
+                {
+                    _servicoFuncionario.InserirOuAtualizar(Funcionario);
+                    Close();
+                }
             }
-            catch
+            catch (AplicacaoException ex)
             {
-                MessageBox.Show("por favor inserir caracteres", "atenção");
-                Validar();
+                MessageBox.Show(ex.Message, "atenção");
             }
         }
 
         private bool Validar()
         {
             dxErrorProvider1.ClearErrors();
-            dxErrorProvider1.SetError(txtCPF, "Campo obrigatorio");
-            dxErrorProvider1.SetError(txtNome, "Campo obrigatorio");
-            
+            if (string.IsNullOrEmpty(txtCPF.EditValue.ToString()))
+                dxErrorProvider1.SetError(txtCPF, "Campo obrigatorio", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+            if (string.IsNullOrEmpty(txtNome.EditValue.ToString()))
+                dxErrorProvider1.SetError(txtNome, "Campo obrigatorio", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Default);
+
+
             return dxErrorProvider1.HasErrors;
         }
 
 
         private void btneAnexo_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            var linha = (Anexo)gridView3.GetRow(gridView3.FocusedRowHandle);
+            var linha = (Anexo)gridAnexo.GetRow(gridAnexo.FocusedRowHandle);
             if (linha == null)
-            { 
+            {
                 linha = new Anexo();
                 Funcionario.Anexos.Add(linha);
             }
@@ -164,5 +169,5 @@ namespace Gefun.UI
         }
 
 
-    }  
+    }
 }

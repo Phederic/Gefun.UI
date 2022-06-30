@@ -3,6 +3,7 @@
 using Gefun.Dominio.Base;
 using Gefun.Repositorio.Base;
 using Gefun.Repositorio.Configuracao;
+using System;
 using System.Data.SqlClient;
 
 namespace Gefun.Servico.Base
@@ -49,16 +50,23 @@ namespace Gefun.Servico.Base
 
         public T Inserir(T obj)
         {
-
-            using (var myConn = DbContext.ObterConexao())
-
+            try
             {
-                myConn.Open();
-                Validar(obj);
-                PreInserirEAtualizar(obj);
-                obj = Inserindo(obj);
-                PosInserirEAtualizar(obj);
-                return obj;
+                using (var myConn = DbContext.ObterConexao())
+                {
+                    myConn.Open();
+                    Validar(obj);
+                    PreInserirEAtualizar(obj);
+                    obj = Inserindo(obj);
+                    PosInserirEAtualizar(obj);
+                    return obj;
+                }
+            }
+            catch (PersistenciaException) { throw; }
+            catch (AplicacaoException ) { throw; }
+            catch (Exception ex)
+            {
+                throw PersistenciaException.Criar("Erro ao inserir", ex, obj);
             }
         }
 

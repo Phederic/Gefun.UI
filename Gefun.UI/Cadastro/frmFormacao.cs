@@ -53,7 +53,7 @@ namespace Gefun.UI.Cadastro
         private bool Validar()
         {
             dxErrorProvider1.ClearErrors();
-            dxErrorProvider1.SetError(textEdit1, "Campo obrigatorio");
+            dxErrorProvider1.SetError(txtFormacao, "Campo obrigatorio");
             return dxErrorProvider1.HasErrors;
         }
     }

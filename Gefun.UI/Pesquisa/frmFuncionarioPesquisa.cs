@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraPrinting;
 using Gefun.Dominio.Classe;
 using Gefun.Repositorio.Base;
 using Gefun.Servico.Interface;
@@ -56,27 +57,38 @@ namespace Gefun.UI.Pesquisa
             var result = MessageBox.Show("Deseja imprimir?", "IMPRMIR", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                gridControl1.ShowPrintPreview();
+                gridControlFuncionario.ShowPrintPreview();
             }
         }
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DevExpress.XtraGrid.Views.Grid.GridView View = gridControl1.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
+       
             var result = MessageBox.Show("Deseja salvar em excel?", "SALVAR", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "CSV file (*.csv)|*.csv|";
+            dialog.ShowDialog();
+            string xlsxExportFile = dialog.FileName;
+
+                XlsxExportOptions options = new XlsxExportOptions();
+            options.ShowGridLines = true;
+            
+
+            DevExpress.XtraGrid.Views.Grid.GridView View = gridControlFuncionario.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
                 if (View != null)
                 {
                     View.OptionsPrint.ExpandAllDetails = true;
-                    View.ExportToXlsx("ListaFuncionario.csv");
+                    View.ExportToXlsx(xlsxExportFile, options);
                 }
             }
         }
 
         private void gridControl1_DoubleClick(object sender, EventArgs e)
         {
-            var linha = (Funcionario)gridView1.GetFocusedRow();
+            var linha = (Funcionario)gridViewFuncionario.GetFocusedRow();
             var frm = new frmFuncionario(linha);
             frm.ShowDialog();
             Pesquisar();
@@ -85,7 +97,7 @@ namespace Gefun.UI.Pesquisa
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            var linha = (Funcionario)gridView1.GetRow(gridView1.FocusedRowHandle);
+            var linha = (Funcionario)gridViewFuncionario.GetRow(gridViewFuncionario.FocusedRowHandle);
             if (linha == null)
                 return;
             var result = MessageBox.Show("Deseja excluir", "Exclusão", MessageBoxButtons.YesNo);
@@ -101,14 +113,27 @@ namespace Gefun.UI.Pesquisa
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DevExpress.XtraGrid.Views.Grid.GridView View = gridControl1.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
+       
             var result = MessageBox.Show("Deseja salvar em PDF?", "SALVAR", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "Pdf Files|*.pdf";
+            dialog.ShowDialog();
+            string pdfExportFile = dialog.FileName;
+
+            PdfExportOptions options = new PdfExportOptions();
+            options.ShowPrintDialogOnOpen = true;
+            
+           
+
+            DevExpress.XtraGrid.Views.Grid.GridView View = gridControlFuncionario.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
                 if (View != null)
                 {
                     View.OptionsPrint.ExpandAllDetails = true;
-                    View.ExportToPdf("ListaFuncionario.pdf");
+                    View.ExportToPdf(pdfExportFile, options);
+                    
                 }
             }
         }

@@ -30,32 +30,32 @@ namespace Gefun.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject33 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject37 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject38 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject39 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject40 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject41 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject42 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject43 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject44 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject45 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject46 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject47 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject48 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlAnexo = new DevExpress.XtraGrid.GridControl();
             this.anexosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funcionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridAnexo = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFuncionarioId2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colArquivo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btneAnexo = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -63,9 +63,9 @@ namespace Gefun.UI
             this.colId2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEstaSalvo2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlParentesco = new DevExpress.XtraGrid.GridControl();
             this.parentescosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridParentesco = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFuncionarioId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTipo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lkpTipo = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -77,9 +77,9 @@ namespace Gefun.UI
             this.colEstaSalvo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Deletar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.riDeletar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlTreinamentos = new DevExpress.XtraGrid.GridControl();
             this.treinamentosRealizadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridTreinamentos = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFuncionarioId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTreinamentoId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lkpTreinamentos = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -88,27 +88,25 @@ namespace Gefun.UI
             this.colEstaSalvo1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DeletarTreinamento = new DevExpress.XtraGrid.Columns.GridColumn();
             this.riDeletarTreinamento = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.memoObservacao = new DevExpress.XtraEditors.MemoEdit();
             this.txtNome = new DevExpress.XtraEditors.TextEdit();
             this.txtCPF = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtData = new DevExpress.XtraEditors.DateEdit();
             this.lkpSexo = new DevExpress.XtraEditors.LookUpEdit();
             this.lkpEstadoCivil = new DevExpress.XtraEditors.LookUpEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNovaFormacao = new DevExpress.XtraEditors.SimpleButton();
             this.lkpFormacao = new DevExpress.XtraEditors.LookUpEdit();
             this.btnCadastrar = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lkpSexo_ = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -116,6 +114,8 @@ namespace Gefun.UI
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -124,43 +124,41 @@ namespace Gefun.UI
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlAnexo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anexosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAnexo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btneAnexo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlParentesco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parentescosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridParentesco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpTipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpCidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riDeletar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTreinamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinamentosRealizadosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTreinamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpTreinamentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.riDeletarTreinamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoObservacao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNome.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCPF.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtData.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtData.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpSexo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpEstadoCivil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpFormacao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpSexo_)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
@@ -168,6 +166,8 @@ namespace Gefun.UI
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -178,17 +178,17 @@ namespace Gefun.UI
             // 
             // dataLayoutControl1
             // 
-            this.dataLayoutControl1.Controls.Add(this.gridControl3);
-            this.dataLayoutControl1.Controls.Add(this.gridControl1);
-            this.dataLayoutControl1.Controls.Add(this.gridControl2);
-            this.dataLayoutControl1.Controls.Add(this.memoEdit1);
+            this.dataLayoutControl1.Controls.Add(this.gridControlAnexo);
+            this.dataLayoutControl1.Controls.Add(this.gridControlParentesco);
+            this.dataLayoutControl1.Controls.Add(this.gridControlTreinamentos);
+            this.dataLayoutControl1.Controls.Add(this.memoObservacao);
             this.dataLayoutControl1.Controls.Add(this.txtNome);
             this.dataLayoutControl1.Controls.Add(this.txtCPF);
-            this.dataLayoutControl1.Controls.Add(this.textEdit7);
-            this.dataLayoutControl1.Controls.Add(this.textEdit2);
+            this.dataLayoutControl1.Controls.Add(this.txtEmail);
+            this.dataLayoutControl1.Controls.Add(this.txtData);
             this.dataLayoutControl1.Controls.Add(this.lkpSexo);
             this.dataLayoutControl1.Controls.Add(this.lkpEstadoCivil);
-            this.dataLayoutControl1.Controls.Add(this.simpleButton2);
+            this.dataLayoutControl1.Controls.Add(this.btnNovaFormacao);
             this.dataLayoutControl1.Controls.Add(this.lkpFormacao);
             this.dataLayoutControl1.Controls.Add(this.btnCadastrar);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -200,19 +200,19 @@ namespace Gefun.UI
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
-            // gridControl3
+            // gridControlAnexo
             // 
-            this.gridControl3.DataSource = this.anexosBindingSource;
-            this.gridControl3.Location = new System.Drawing.Point(24, 47);
-            this.gridControl3.MainView = this.gridView3;
-            this.gridControl3.Name = "gridControl3";
-            this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridControlAnexo.DataSource = this.anexosBindingSource;
+            this.gridControlAnexo.Location = new System.Drawing.Point(24, 47);
+            this.gridControlAnexo.MainView = this.gridAnexo;
+            this.gridControlAnexo.Name = "gridControlAnexo";
+            this.gridControlAnexo.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btneAnexo,
             this.repositoryItemImageEdit1});
-            this.gridControl3.Size = new System.Drawing.Size(932, 482);
-            this.gridControl3.TabIndex = 35;
-            this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
+            this.gridControlAnexo.Size = new System.Drawing.Size(932, 482);
+            this.gridControlAnexo.TabIndex = 35;
+            this.gridControlAnexo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridAnexo});
             // 
             // anexosBindingSource
             // 
@@ -223,19 +223,19 @@ namespace Gefun.UI
             // 
             this.funcionarioBindingSource.DataSource = typeof(Gefun.Dominio.Classe.Funcionario);
             // 
-            // gridView3
+            // gridAnexo
             // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridAnexo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colFuncionarioId2,
             this.colArquivo,
             this.colExcluir2,
             this.colId2,
             this.colEstaSalvo2});
-            this.gridView3.GridControl = this.gridControl3;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsNavigation.AutoFocusNewRow = true;
-            this.gridView3.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
-            this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridAnexo.GridControl = this.gridControlAnexo;
+            this.gridAnexo.Name = "gridAnexo";
+            this.gridAnexo.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridAnexo.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridAnexo.OptionsView.ShowGroupPanel = false;
             // 
             // colFuncionarioId2
             // 
@@ -248,6 +248,7 @@ namespace Gefun.UI
             this.colArquivo.FieldName = "NomeArquivo";
             this.colArquivo.Name = "colArquivo";
             this.colArquivo.OptionsEditForm.StartNewRow = true;
+            this.colArquivo.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colArquivo.Visible = true;
             this.colArquivo.VisibleIndex = 0;
             // 
@@ -284,29 +285,29 @@ namespace Gefun.UI
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
             // 
-            // gridControl1
+            // gridControlParentesco
             // 
-            this.gridControl1.DataSource = this.parentescosBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(24, 47);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridControlParentesco.DataSource = this.parentescosBindingSource;
+            this.gridControlParentesco.Location = new System.Drawing.Point(24, 47);
+            this.gridControlParentesco.MainView = this.gridParentesco;
+            this.gridControlParentesco.Name = "gridControlParentesco";
+            this.gridControlParentesco.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lkpCidade,
             this.lkpTipo,
             this.riDeletar});
-            this.gridControl1.Size = new System.Drawing.Size(932, 482);
-            this.gridControl1.TabIndex = 33;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridControlParentesco.Size = new System.Drawing.Size(932, 482);
+            this.gridControlParentesco.TabIndex = 33;
+            this.gridControlParentesco.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridParentesco});
             // 
             // parentescosBindingSource
             // 
             this.parentescosBindingSource.DataMember = "Parentescos";
             this.parentescosBindingSource.DataSource = this.funcionarioBindingSource;
             // 
-            // gridView1
+            // gridParentesco
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridParentesco.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colFuncionarioId,
             this.colTipo,
             this.colNome,
@@ -315,11 +316,11 @@ namespace Gefun.UI
             this.colId,
             this.colEstaSalvo,
             this.Deletar});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsNavigation.AutoFocusNewRow = true;
-            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridParentesco.GridControl = this.gridControlParentesco;
+            this.gridParentesco.Name = "gridParentesco";
+            this.gridParentesco.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridParentesco.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridParentesco.OptionsView.ShowGroupPanel = false;
             // 
             // colFuncionarioId
             // 
@@ -359,6 +360,7 @@ namespace Gefun.UI
             this.colCidadeId.ColumnEdit = this.lkpCidade;
             this.colCidadeId.FieldName = "CidadeId";
             this.colCidadeId.Name = "colCidadeId";
+            this.colCidadeId.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colCidadeId.Visible = true;
             this.colCidadeId.VisibleIndex = 1;
             // 
@@ -366,7 +368,7 @@ namespace Gefun.UI
             // 
             this.lkpCidade.AutoHeight = false;
             this.lkpCidade.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, true, true, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, true, true, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.lkpCidade.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Descricao", "Cidade")});
             this.lkpCidade.DisplayMember = "Descricao";
@@ -410,48 +412,48 @@ namespace Gefun.UI
             // riDeletar
             // 
             this.riDeletar.AutoHeight = false;
-            editorButtonImageOptions10.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions10.Image")));
-            editorButtonImageOptions10.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
             this.riDeletar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.riDeletar.Name = "riDeletar";
             this.riDeletar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.riDeletar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.riDeletar_ButtonClick);
             // 
-            // gridControl2
+            // gridControlTreinamentos
             // 
-            this.gridControl2.DataSource = this.treinamentosRealizadosBindingSource;
-            this.gridControl2.Location = new System.Drawing.Point(24, 47);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridControlTreinamentos.DataSource = this.treinamentosRealizadosBindingSource;
+            this.gridControlTreinamentos.Location = new System.Drawing.Point(24, 47);
+            this.gridControlTreinamentos.MainView = this.gridTreinamentos;
+            this.gridControlTreinamentos.Name = "gridControlTreinamentos";
+            this.gridControlTreinamentos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.riDeletarTreinamento,
             this.lkpTreinamentos});
-            this.gridControl2.Size = new System.Drawing.Size(932, 482);
-            this.gridControl2.TabIndex = 25;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            this.gridControl2.Visible = false;
+            this.gridControlTreinamentos.Size = new System.Drawing.Size(932, 482);
+            this.gridControlTreinamentos.TabIndex = 25;
+            this.gridControlTreinamentos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridTreinamentos});
+            this.gridControlTreinamentos.Visible = false;
             // 
             // treinamentosRealizadosBindingSource
             // 
             this.treinamentosRealizadosBindingSource.DataMember = "TreinamentosRealizados";
             this.treinamentosRealizadosBindingSource.DataSource = this.funcionarioBindingSource;
             // 
-            // gridView2
+            // gridTreinamentos
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridTreinamentos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colFuncionarioId1,
             this.colTreinamentoId,
             this.colExcluir1,
             this.colId1,
             this.colEstaSalvo1,
             this.DeletarTreinamento});
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsNavigation.AutoFocusNewRow = true;
-            this.gridView2.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridTreinamentos.GridControl = this.gridControlTreinamentos;
+            this.gridTreinamentos.Name = "gridTreinamentos";
+            this.gridTreinamentos.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridTreinamentos.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridTreinamentos.OptionsView.ShowGroupPanel = false;
             // 
             // colFuncionarioId1
             // 
@@ -465,6 +467,7 @@ namespace Gefun.UI
             this.colTreinamentoId.ColumnEdit = this.lkpTreinamentos;
             this.colTreinamentoId.FieldName = "TreinamentosId";
             this.colTreinamentoId.Name = "colTreinamentoId";
+            this.colTreinamentoId.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colTreinamentoId.Visible = true;
             this.colTreinamentoId.VisibleIndex = 0;
             // 
@@ -472,7 +475,7 @@ namespace Gefun.UI
             // 
             this.lkpTreinamentos.AutoHeight = false;
             this.lkpTreinamentos.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, true, true, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Plus, "", -1, true, true, true, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.lkpTreinamentos.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Descricao", "Treinamentos")});
             this.lkpTreinamentos.DisplayMember = "Descricao";
@@ -511,21 +514,21 @@ namespace Gefun.UI
             // riDeletarTreinamento
             // 
             this.riDeletarTreinamento.AutoHeight = false;
-            editorButtonImageOptions12.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions12.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             this.riDeletarTreinamento.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.riDeletarTreinamento.Name = "riDeletarTreinamento";
             this.riDeletarTreinamento.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.riDeletarTreinamento.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.riDeletarTreinamento_ButtonClick);
             // 
-            // memoEdit1
+            // memoObservacao
             // 
-            this.memoEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "Observacao", true));
-            this.memoEdit1.Location = new System.Drawing.Point(131, 169);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(825, 360);
-            this.memoEdit1.StyleController = this.dataLayoutControl1;
-            this.memoEdit1.TabIndex = 9;
+            this.memoObservacao.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "Observacao", true));
+            this.memoObservacao.Location = new System.Drawing.Point(131, 169);
+            this.memoObservacao.Name = "memoObservacao";
+            this.memoObservacao.Size = new System.Drawing.Size(825, 360);
+            this.memoObservacao.StyleController = this.dataLayoutControl1;
+            this.memoObservacao.TabIndex = 9;
             // 
             // txtNome
             // 
@@ -550,42 +553,42 @@ namespace Gefun.UI
             this.txtCPF.StyleController = this.dataLayoutControl1;
             this.txtCPF.TabIndex = 6;
             // 
-            // textEdit7
+            // txtEmail
             // 
-            this.textEdit7.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "Email", true));
-            this.textEdit7.Location = new System.Drawing.Point(131, 119);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(825, 20);
-            this.textEdit7.StyleController = this.dataLayoutControl1;
-            this.textEdit7.TabIndex = 11;
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "Email", true));
+            this.txtEmail.Location = new System.Drawing.Point(131, 119);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(825, 20);
+            this.txtEmail.StyleController = this.dataLayoutControl1;
+            this.txtEmail.TabIndex = 11;
             // 
-            // textEdit2
+            // txtData
             // 
-            this.textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "DataNascimento", true));
-            this.textEdit2.EditValue = null;
-            this.textEdit2.Location = new System.Drawing.Point(765, 71);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.BeepOnError = false;
-            this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtData.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.funcionarioBindingSource, "DataNascimento", true));
+            this.txtData.EditValue = null;
+            this.txtData.Location = new System.Drawing.Point(765, 71);
+            this.txtData.Name = "txtData";
+            this.txtData.Properties.BeepOnError = false;
+            this.txtData.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtData.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit2.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "d";
-            this.textEdit2.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.textEdit2.Properties.CalendarTimeProperties.TouchUIMaxValue = new System.DateTime(2022, 3, 8, 0, 0, 0, 0);
-            this.textEdit2.Properties.CalendarTimeProperties.TouchUIMinValue = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.textEdit2.Properties.DisplayFormat.FormatString = "";
-            this.textEdit2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.textEdit2.Properties.EditFormat.FormatString = "";
-            this.textEdit2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.textEdit2.Properties.MaskSettings.Set("mask", "d");
-            this.textEdit2.Properties.MaxValue = new System.DateTime(2022, 3, 8, 0, 0, 0, 0);
-            this.textEdit2.Properties.MinValue = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.textEdit2.Properties.NullDateCalendarValue = new System.DateTime(2022, 3, 8, 15, 21, 10, 0);
-            this.textEdit2.Properties.UseMaskAsDisplayFormat = true;
-            this.textEdit2.Size = new System.Drawing.Size(191, 20);
-            this.textEdit2.StyleController = this.dataLayoutControl1;
-            this.textEdit2.TabIndex = 5;
+            this.txtData.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "d";
+            this.txtData.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtData.Properties.CalendarTimeProperties.TouchUIMaxValue = new System.DateTime(2022, 3, 8, 0, 0, 0, 0);
+            this.txtData.Properties.CalendarTimeProperties.TouchUIMinValue = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.txtData.Properties.DisplayFormat.FormatString = "";
+            this.txtData.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtData.Properties.EditFormat.FormatString = "";
+            this.txtData.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtData.Properties.MaskSettings.Set("mask", "d");
+            this.txtData.Properties.MaxValue = new System.DateTime(2022, 3, 8, 0, 0, 0, 0);
+            this.txtData.Properties.MinValue = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.txtData.Properties.NullDateCalendarValue = new System.DateTime(1990, 2, 7, 0, 0, 0, 0);
+            this.txtData.Properties.UseMaskAsDisplayFormat = true;
+            this.txtData.Size = new System.Drawing.Size(191, 20);
+            this.txtData.StyleController = this.dataLayoutControl1;
+            this.txtData.TabIndex = 5;
             // 
             // lkpSexo
             // 
@@ -619,22 +622,23 @@ namespace Gefun.UI
             this.lkpEstadoCivil.StyleController = this.dataLayoutControl1;
             this.lkpEstadoCivil.TabIndex = 28;
             // 
-            // simpleButton2
+            // btnNovaFormacao
             // 
-            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.ImageOptions.SvgImageSize = new System.Drawing.Size(15, 15);
-            this.simpleButton2.Location = new System.Drawing.Point(832, 143);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(124, 22);
-            this.simpleButton2.StyleController = this.dataLayoutControl1;
-            this.simpleButton2.TabIndex = 30;
-            this.simpleButton2.Text = "Nova formação";
-            this.simpleButton2.ToolTip = "Criar uma nova formação";
-            this.simpleButton2.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
-            this.simpleButton2.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.simpleButton2.ToolTipTitle = "Nova formação";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_1);
+            this.btnNovaFormacao.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnNovaFormacao.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.btnNovaFormacao.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNovaFormacao.ImageOptions.SvgImage")));
+            this.btnNovaFormacao.ImageOptions.SvgImageSize = new System.Drawing.Size(15, 15);
+            this.btnNovaFormacao.Location = new System.Drawing.Point(832, 143);
+            this.btnNovaFormacao.Name = "btnNovaFormacao";
+            this.btnNovaFormacao.Size = new System.Drawing.Size(124, 22);
+            this.btnNovaFormacao.StyleController = this.dataLayoutControl1;
+            this.btnNovaFormacao.TabIndex = 30;
+            this.btnNovaFormacao.Text = "Nova formação";
+            this.btnNovaFormacao.ToolTip = "Criar uma nova formação";
+            this.btnNovaFormacao.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.btnNovaFormacao.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.btnNovaFormacao.ToolTipTitle = "Nova formação";
+            this.btnNovaFormacao.Click += new System.EventHandler(this.simpleButton2_Click_1);
             // 
             // lkpFormacao
             // 
@@ -654,6 +658,7 @@ namespace Gefun.UI
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCadastrar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             this.btnCadastrar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCadastrar.ImageOptions.SvgImage")));
             this.btnCadastrar.ImageOptions.SvgImageSize = new System.Drawing.Size(15, 15);
@@ -682,31 +687,13 @@ namespace Gefun.UI
             // 
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.tabbedControlGroup1.Name = "tabbedControlGroup1";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup5;
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup4;
             this.tabbedControlGroup1.Size = new System.Drawing.Size(960, 533);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup1,
             this.layoutControlGroup3,
             this.layoutControlGroup4,
             this.layoutControlGroup5});
-            // 
-            // layoutControlGroup5
-            // 
-            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem11});
-            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup5.Name = "layoutControlGroup5";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(936, 486);
-            this.layoutControlGroup5.Text = "Anexo";
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.gridControl3;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(936, 486);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlGroup1
             // 
@@ -716,7 +703,7 @@ namespace Gefun.UI
             this.layoutControlItem2,
             this.layoutControlItem8,
             this.layoutControlItem6,
-            this.layoutControlItem4,
+            this.lkpSexo_,
             this.layoutControlItem5,
             this.layoutControlItem7,
             this.layoutControlItem10});
@@ -745,7 +732,7 @@ namespace Gefun.UI
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.textEdit2;
+            this.layoutControlItem2.Control = this.txtData;
             this.layoutControlItem2.Location = new System.Drawing.Point(634, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(302, 24);
@@ -754,7 +741,7 @@ namespace Gefun.UI
             // 
             // layoutControlItem8
             // 
-            this.layoutControlItem8.Control = this.textEdit7;
+            this.layoutControlItem8.Control = this.txtEmail;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(936, 24);
@@ -763,21 +750,21 @@ namespace Gefun.UI
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.memoEdit1;
+            this.layoutControlItem6.Control = this.memoObservacao;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 122);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(936, 364);
             this.layoutControlItem6.Text = "Observação";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(95, 13);
             // 
-            // layoutControlItem4
+            // lkpSexo_
             // 
-            this.layoutControlItem4.Control = this.lkpSexo;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(462, 24);
-            this.layoutControlItem4.Text = "Sexo";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(95, 13);
+            this.lkpSexo_.Control = this.lkpSexo;
+            this.lkpSexo_.Location = new System.Drawing.Point(0, 48);
+            this.lkpSexo_.Name = "lkpSexo_";
+            this.lkpSexo_.Size = new System.Drawing.Size(462, 24);
+            this.lkpSexo_.Text = "Sexo";
+            this.lkpSexo_.TextSize = new System.Drawing.Size(95, 13);
             // 
             // layoutControlItem5
             // 
@@ -799,7 +786,7 @@ namespace Gefun.UI
             // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.Control = this.simpleButton2;
+            this.layoutControlItem10.Control = this.btnNovaFormacao;
             this.layoutControlItem10.Location = new System.Drawing.Point(808, 96);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(128, 26);
@@ -817,7 +804,7 @@ namespace Gefun.UI
             // 
             // layoutControlItem14
             // 
-            this.layoutControlItem14.Control = this.gridControl1;
+            this.layoutControlItem14.Control = this.gridControlParentesco;
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(936, 486);
@@ -835,12 +822,30 @@ namespace Gefun.UI
             // 
             // layoutControlItem18
             // 
-            this.layoutControlItem18.Control = this.gridControl2;
+            this.layoutControlItem18.Control = this.gridControlTreinamentos;
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Size = new System.Drawing.Size(936, 486);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
+            // 
+            // layoutControlGroup5
+            // 
+            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem11});
+            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup5.Name = "layoutControlGroup5";
+            this.layoutControlGroup5.Size = new System.Drawing.Size(936, 486);
+            this.layoutControlGroup5.Text = "Anexo";
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.gridControlAnexo;
+            this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(936, 486);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem9
             // 
@@ -880,52 +885,60 @@ namespace Gefun.UI
             // 
             // frmFuncionario
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.Appearance.BorderColor = System.Drawing.Color.White;
+            this.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
+            this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 579);
             this.Controls.Add(this.dataLayoutControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmFuncionario.IconOptions.SvgImage")));
+            this.KeyPreview = true;
+            this.LookAndFeel.SkinName = "McSkin";
+            this.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.Name = "frmFuncionario";
             this.Text = "Cadastro de funcionario";
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlAnexo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.anexosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAnexo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btneAnexo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlParentesco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parentescosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridParentesco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpTipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpCidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riDeletar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTreinamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinamentosRealizadosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTreinamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpTreinamentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.riDeletarTreinamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoObservacao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNome.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCPF.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtData.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtData.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpSexo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpEstadoCivil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpFormacao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkpSexo_)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
@@ -933,6 +946,8 @@ namespace Gefun.UI
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
@@ -948,10 +963,10 @@ namespace Gefun.UI
         private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private System.Windows.Forms.BindingSource funcionarioBindingSource;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.MemoEdit memoObservacao;
         private DevExpress.XtraEditors.TextEdit txtNome;
         private DevExpress.XtraEditors.TextEdit txtCPF;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
         private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
@@ -963,19 +978,19 @@ namespace Gefun.UI
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.GridControl gridControlTreinamentos;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridTreinamentos;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
         private DevExpress.XtraEditors.LookUpEdit lkpSexo;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraLayout.LayoutControlItem lkpSexo_;
+        private DevExpress.XtraEditors.SimpleButton btnNovaFormacao;
         private DevExpress.XtraEditors.LookUpEdit lkpFormacao;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraEditors.LookUpEdit lkpEstadoCivil;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControlParentesco;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridParentesco;
         private DevExpress.XtraGrid.Columns.GridColumn colFuncionarioId;
         private DevExpress.XtraGrid.Columns.GridColumn colTipo;
         private DevExpress.XtraGrid.Columns.GridColumn colNome;
@@ -999,15 +1014,15 @@ namespace Gefun.UI
         private DevExpress.XtraGrid.Columns.GridColumn DeletarTreinamento;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit riDeletarTreinamento;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lkpTreinamentos;
-        private DevExpress.XtraEditors.DateEdit textEdit2;
+        private DevExpress.XtraEditors.DateEdit txtData;
         private DevExpress.XtraEditors.SimpleButton btnCadastrar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraGrid.GridControl gridControl3;
+        private DevExpress.XtraGrid.GridControl gridControlAnexo;
         private System.Windows.Forms.BindingSource anexosBindingSource;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridAnexo;
         private DevExpress.XtraGrid.Columns.GridColumn colFuncionarioId2;
         private DevExpress.XtraGrid.Columns.GridColumn colArquivo;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btneAnexo;

@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraPrinting;
 using Gefun.Dominio.Classe.Cadastro;
 using Gefun.Repositorio.Base;
 using Gefun.Servico.Interface;
@@ -47,7 +48,7 @@ namespace Gefun.UI.Pesquisa
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var linha = (Formacao)gridView1.GetRow(gridView1.FocusedRowHandle);
+            var linha = (Formacao)gridViewFormacao.GetRow(gridViewFormacao.FocusedRowHandle);
             {
                 if (linha == null)
                     return;
@@ -75,41 +76,58 @@ namespace Gefun.UI.Pesquisa
             var result = MessageBox.Show("Deseja imprimir?", "IMPRIMIR", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                gridControl1.ShowPrintPreview();
+                gridControlFormacao.ShowPrintPreview();
             }
         }
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DevExpress.XtraGrid.Views.Grid.GridView View = gridControl1.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
             var result = MessageBox.Show("Deseja salvar em excel?", "SALVAR", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "CSV file (*.csv)|*.csv|";
+            dialog.ShowDialog();
+            string xlsxExportFile = dialog.FileName;
+
+            DevExpress.XtraGrid.Views.Grid.GridView View = gridControlFormacao.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
                 if (View != null)
                 {
                     View.OptionsPrint.ExpandAllDetails = true;
-                    View.ExportToXlsx("ListaFormacao.csv");
+                    View.ExportToXlsx(xlsxExportFile);
                 }
             }
         }
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DevExpress.XtraGrid.Views.Grid.GridView View = gridControl1.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
             var result = MessageBox.Show("Deseja salvar em pdf?", "SALVAR", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "Pdf Files|*.pdf";
+            dialog.ShowDialog();
+            string pdfExportFile = dialog.FileName;
+
+
+            PdfExportOptions options = new PdfExportOptions();
+            options.ShowPrintDialogOnOpen = true;
+
+            DevExpress.XtraGrid.Views.Grid.GridView View = gridControlFormacao.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
                 if (View != null)
                 {
                     View.OptionsPrint.ExpandAllDetails = true;
-                    View.ExportToPdf("ListaFormacao.pdf");
+                    View.ExportToPdf(pdfExportFile, options);
                 }
             }
         }
 
         private void gridControl1_DoubleClick(object sender, EventArgs e)
         {
-            var linha = (Formacao)gridView1.GetFocusedRow();
+            var linha = (Formacao)gridViewFormacao.GetFocusedRow();
             var frm = new frmFormacao(linha);
             frm.ShowDialog();
             Pesquisar();

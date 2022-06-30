@@ -32,7 +32,7 @@ namespace Gefun.UI.Cadastro
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormacao));
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFormacao = new DevExpress.XtraEditors.TextEdit();
             this.formacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnCadastrar = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -43,7 +43,7 @@ namespace Gefun.UI.Cadastro
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFormacao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -55,7 +55,7 @@ namespace Gefun.UI.Cadastro
             // 
             // dataLayoutControl1
             // 
-            this.dataLayoutControl1.Controls.Add(this.textEdit1);
+            this.dataLayoutControl1.Controls.Add(this.txtFormacao);
             this.dataLayoutControl1.Controls.Add(this.btnCadastrar);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -65,14 +65,14 @@ namespace Gefun.UI.Cadastro
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
-            // textEdit1
+            // txtFormacao
             // 
-            this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.formacaoBindingSource, "Descricao", true));
-            this.textEdit1.Location = new System.Drawing.Point(71, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(215, 20);
-            this.textEdit1.StyleController = this.dataLayoutControl1;
-            this.textEdit1.TabIndex = 4;
+            this.txtFormacao.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.formacaoBindingSource, "Descricao", true));
+            this.txtFormacao.Location = new System.Drawing.Point(71, 12);
+            this.txtFormacao.Name = "txtFormacao";
+            this.txtFormacao.Size = new System.Drawing.Size(215, 20);
+            this.txtFormacao.StyleController = this.dataLayoutControl1;
+            this.txtFormacao.TabIndex = 4;
             // 
             // formacaoBindingSource
             // 
@@ -106,7 +106,7 @@ namespace Gefun.UI.Cadastro
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.textEdit1;
+            this.layoutControlItem1.Control = this.txtFormacao;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(278, 24);
@@ -153,7 +153,7 @@ namespace Gefun.UI.Cadastro
             this.Text = "Cadastro de formação";
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFormacao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formacaoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -169,7 +169,7 @@ namespace Gefun.UI.Cadastro
 
         private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtFormacao;
         private DevExpress.XtraEditors.SimpleButton btnCadastrar;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
